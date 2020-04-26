@@ -166,5 +166,11 @@ git push -m study master
 
   文件已经被删除了！
 
+  **4、当出现master warning: LF will be replaced by CRLF in www/css/style.css.>**
+
+  ```auto
+  git config --global core.autocrlf false
+  ```
+
   
 
