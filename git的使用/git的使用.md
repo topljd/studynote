@@ -172,5 +172,5 @@ git push -m study master
   git config --global core.autocrlf false
   ```
 
-  
+  一般的还是远程仓库中的文件与本地的文件不一样，需要先将远程仓库中的代码拉去到本地种！
 
