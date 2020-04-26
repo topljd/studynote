@@ -138,5 +138,33 @@ git push -m study master
 
 **3、如何删除github库里面的某个文件**
 
+因为在github上不能直接删除某个文件，所以必须用git命令去删除，在上传的的项目文件里打开git，找到要删除的文件。`202002101581332439512796.png`
 
+![image-20200426153611443](images/image-20200426153611443.png)
+
+- `git pull --rebase origin master`或者`git pull origin master`将github上的额文件重新拉下来，其中origin是别名，master是分支。
+
+  ![image-20200426153850252](images/image-20200426153850252.png)
+
+- 然后输入命令`dir`查看目录下的而文件，如下图：
+
+  ![image-20200426154032831](images/image-20200426154032831.png)
+
+- 再输入命令`git rm -r --cache 202002101581332439512796.png `删除磁盘上的该图片
+
+  ![image-20200426154252148](images/image-20200426154252148.png)
+
+- 再输入`git commit -m '删除了202002101581332439512796.png'`提交添加说明如下图：
+
+  ![image-20200426154514866](images/image-20200426154514866.png)
+
+- 最后输入`git push -u origin master`更新github仓库，如下图：
+
+  ![image-20200426154659467](images/image-20200426154659467.png)
+
+  ![image-20200426154725963](images/image-20200426154725963.png)
+
+  文件已经被删除了！
+
+  
 
