@@ -463,7 +463,21 @@ for sql in connection.queries:
 
 `only`和`defer`两个方法，如果没有指定的字段，后面请求的话，也会重新发起一次请求。是可以查询的，但是会影响资源，要谨慎使用！
 
-12、`get`：获取满足条件的数据。这个函数只能返回一条数据，并且如果给的条件有多条数据，那么这个方法会抛出`MultipleObjectsReturned`错误，如果给的条件没有任何数据，那么就会抛出`DoesNotExit`错误。所以这个方法在获取数据的只能，只能有且只有一条。
+12、`get`：获取满足条件的数据。这个函数只能返回一条数据，并且如果给的条件有多条数据，那么这个方法会抛出`MultipleObjectsReturned`错误，如果给的条件没有任何数据，那么就会抛出`DoesNotExit`错误。所以这个方法在获取数据的时候，只能有且只有一条。
+
+```python
+def index9(request):
+    book = Book.objects.get(pk = 2)
+    #满足的条件只能有一个当有多个的时候或者没有值得时候就会报错！
+    print(book)
+    #Book object (2)
+    #水浒传
+    print(book.name)
+    #Book object (1)
+    print(connection.queries)
+    #'SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id` FROM `book` WHERE `book`.`id` = 1 LIMIT 21'
+    return HttpResponse('index9')
+```
 
 13、`create`：创建一条数据，并且保存到数据库中。这个方法相当于先用指定的模型创建一个对象，然后再调用这个对象的`save`方法。示例代码如下：
 
@@ -473,12 +487,49 @@ article.save()
 
 # 下面这行代码相当于以上两行代码
 article = Article.objects.create(title='abc')
+#============================================
+def index10(request):
+    #publisher = Publisher(name='知了出版社')
+    #publisher.save()
+    #print(connection.queries[2:])
+    #[{'sql': "INSERT INTO `publisher` (`name`) VALUES ('知了出版社')", 'time': '0.032'}]
+
+    publisher = Publisher.objects.create(name='知了课堂出版社')#相当于上面的两行代码
+    print(connection.queries[2:])
+    #[{'sql': "INSERT INTO `publisher` (`name`) VALUES ('知了课堂出版社')", 'time': '0.031'}]
+
+    return HttpResponse('index10')
 ```
 
 14、`get_or_create`：根据某个条件进行查找，如果找到了那么就返回这条数据，如果没有查找到，那么就创建一个。示例代码如下：
 
 ```python
 obj,created= Category.objects.get_or_create(title='默认分类')
+
+models.py
+def publisher_default():
+    return Publisher.objects.get_or_create(name ='默认的出版社')
+
+class Book(models.Model):
+    name = models.CharField(max_length=300)
+    pages = models.IntegerField()
+    price = models.FloatField()
+    rating = models.FloatField()
+    author = models.ForeignKey(Author, models.DO_NOTHING)
+    publisher = models.ForeignKey('Publisher', on_delete=models.SET_DEFAULT,default=publisher_default)
+    
+views.py
+def index11(request):
+    result = Publisher.objects.get_or_create(name = '知了出版社')
+    #(<Publisher: Publisher object (3)>, False)  知了出版社存在，就不会创建
+    print(result)
+
+    #如果数据不存在
+    result = Publisher.objects.get_or_create(name='知了ABC出版社')
+    #(<Publisher: Publisher object (5)>, True)
+    print(result)
+
+    return HttpResponse('index11')
 ```
 
 如果有标题等于`默认分类`的分类，那么就会查找出来，如果没有，则会创建并且存储到数据库中。
@@ -487,22 +538,42 @@ obj,created= Category.objects.get_or_create(title='默认分类')
 15、`bulk_create`：一次性创建多个数据。示例代码如下：
 
 ```python
-Tag.objects.bulk_create([
-    Tag(name='111'),
-    Tag(name='222'),
-])
+    #创建多个出版社
+    publisher = Publisher.objects.bulk_create(
+        [
+            Publisher(name = '123出版社'),
+            Publisher(name='abc出版社'),
+        ]
+    )
+    #注意：如果数据库中存在，同样会继续创建
 ```
 
-`count`：获取提取的数据的个数。如果想要知道总共有多少条数据，那么建议使用`count`，而不是使用`len(articles)`这种。因为`count`在底层是使用`select count(*)`来实现的，这种方式比使用`len`函数更加的高效。
-
-`first`和`last`：返回`QuerySet`中的第一条和最后一条数据。
-
-`aggregate`：使用聚合函数。
-
-`exists`：判断某个条件的数据是否存在。如果要判断某个条件的元素是否存在，那么建议使用`exists`，这比使用`count`或者直接判断`QuerySet`更有效得多。示例代码如下：
+16、`count`：获取提取的数据的个数。如果想要知道总共有多少条数据，那么建议使用`count`，而不是使用`len(articles)`这种。因为`count`在底层是使用`select count(*)`来实现的，这种方式比使用`len`函数更加的高效。
 
 ```python
-if Article.objects.filter(title__contains='hello').exists():
+    count = Book.objects.count()
+    print(count)#4
+    print(connection.queries)
+    #SELECT COUNT(*) AS `__count` FROM `book`
+```
+
+17、`first`和`last`：返回`QuerySet`中的第一条和最后一条数据。
+
+18、`aggregate`：使用聚合函数。
+
+19、`exists`：判断某个条件的数据是否存在。如果要判断某个条件的元素是否存在，那么建议使用`exists`，这比使用`count`或者直接判断`QuerySet`更有效得多。示例代码如下：
+
+```python
+result = Book.objects.filter(name = '三国演义').exists()
+print(result)#True  如果数据存在则返回True否则返回False
+print(connection.queries)
+#"SELECT (1) AS `a` FROM `book` WHERE `book`.`name` = '三国演义' LIMIT 1"
+```
+
+```python
+
+
+if Article.objects.filter(title__contains='hello').exists():#效率最高的
     print(True)
 比使用count更高效：
 if Article.objects.filter(title__contains='hello').count() > 0:
@@ -512,7 +583,7 @@ if Article.objects.filter(title__contains='hello'):
     print(True)
 ```
 
-`distinct`：去除掉那些重复的数据。这个方法如果底层数据库用的是`MySQL`，那么不能传递任何的参数。比如想要提取所有销售的价格超过80元的图书，并且删掉那些重复的，那么可以使用`distinct`来帮我们实现，示例代码如下：
+20、`distinct`：去除掉那些重复的数据。这个方法如果底层数据库用的是`MySQL`，那么不能传递任何的参数。比如想要提取所有销售的价格超过80元的图书，并且删掉那些重复的，那么可以使用`distinct`来帮我们实现，示例代码如下：
 
 ```python
 books = Book.objects.filter(bookorder__price__gte=80).distinct()
@@ -526,23 +597,91 @@ orders = BookOrder.objects.order_by("create_time").values("book_id").distinct()
 
 那么以上代码因为使用了`order_by`，即使使用了`distinct`，也会把重复的`book_id`提取出来。
 
-`update`：执行更新操作，在`SQL`底层走的也是`update`命令。比如要将所有`category`为空的`article`的`article`字段都更新为默认的分类。示例代码如下：
+21、`update`：执行更新操作，在`SQL`底层走的也是`update`命令。比如要将所有`category`为空的`article`的`article`字段都更新为默认的分类。示例代码如下：
 
 ```python
 Article.objects.filter(category__isnull=True).update(category_id=3)
+
+def index14(request):
+    #一般de
+    books = Book.objects.all()
+    # for book in books:
+    #     book.price = book.price + 5
+    #     book.save()
+    Book.objects.update(price=F('price')+5)#F('price') 获取原来的价格 + 5元
+    print(connection.queries)
+    #'UPDATE `book` SET `price` = (`book`.`price` + 5)'
+
+    return HttpResponse('index14')
 ```
 
 注意这个方法走的是更新的逻辑。所以更新完成后保存到数据库中不会执行`save`方法，因此不会更新`auto_now`设置的字段。
 
-`delete`：删除所有满足条件的数据。删除数据的时候，要注意`on_delete`指定的处理方式。
+一次性可以把所有的数据都更新完。
 
-切片操作：有时候我们查找数据，有可能只需要其中的一部分。那么这时候可以使用切片操作来帮我们完成。`QuerySet`使用切片操作就跟列表使用切片操作是一样的。示例代码如下：
+22、`delete`：删除所有满足条件的数据。删除数据的时候，要注意`on_delete`指定的处理方式。
+
+```python
+Author.objects.filter(id__gte=3).delete()
+```
+
+23、切片操作：有时候我们查找数据，有可能只需要其中的一部分。那么这时候可以使用切片操作来帮我们完成。`QuerySet`使用切片操作就跟列表使用切片操作是一样的。示例代码如下：
 
 ```python
 books = Book.objects.all()[1:3]
 for book in books:
     print(book)
+def index15(request):
+    #0,1 = [0:2]
+    books = Book.objects.get_queryset()[0:2]
+    for book in books:
+        print(book.name)
+    '''
+    三国演义
+    水浒传
+    '''
+    print(connection.queries)
+    #'SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id` FROM `book` LIMIT 2'
+
+    #用all的方法
+    books = Book.objects.all()[0:3]
+    for book in books:
+        print(book)
+    '''
+    Book object (1)
+    Book object (2)
+    Book object (3)
+    '''
+    return HttpResponse('index15')
 ```
 
 切片操作并不是把所有数据从数据库中提取出来再做切片操作。而是在数据库层面使用`LIMIE`和`OFFSET`来帮我们完成。所以如果只需要取其中一部分的数据的时候，建议大家使用切片操作。
+
+## 什么时候Django会将QuerySet转换为SQL去执行
+
+生成一个`QuerySet`对象并不会马上转换为`SQL`语句去执行。
+比如我们获取`Book`表下所有的图书：
+
+```python
+books = Book.objects.all()
+print(connection.queries)
+```
+
+我们可以看到在打印`connection.quries`的时候打印的是一个空的列表。说明上面的`QuerySet`并没有真正的执行。
+在以下情况下`QuerySet`会被转换为`SQL`语句执行：
+
+1. 迭代：在遍历`QuerySet`对象的时候，会首先先执行这个`SQL`语句，然后再把这个结果返回进行迭代。比如以下代码就会转换为`SQL`语句：
+
+   ```python
+    for book in Book.objects.all():
+        print(book)
+   ```
+
+2. 使用步长做切片操作：`QuerySet`可以类似于列表一样做切片操作。做切片操作本身不会执行`SQL`语句，但是如果如果在做切片操作的时候提供了步长，那么就会立马执行`SQL`语句。需要注意的是，做切片后不能再执行`filter`方法，否则会报错。
+
+3. 调用`len`函数：调用`len`函数用来获取`QuerySet`中总共有多少条数据也会执行`SQL`语句。
+
+4. 调用`list`函数：调用`list`函数用来将一个`QuerySet`对象转换为`list`对象也会立马执行`SQL`语句。
+
+5. 判断：如果对某个`QuerySet`进行判断，也会立马执行`SQL`语句。
 
