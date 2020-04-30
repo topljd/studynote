@@ -437,13 +437,35 @@ for sql in connection.queries:
     print(sql)
 ```
 
-`defer`虽然能过滤字段，但是有些字段是不能过滤的，比如`id`，即使你过滤了，也会提取出来。
+10、`defer`虽然能过滤字段，但是有些字段是不能过滤的，比如`id`，即使你过滤了，也会提取出来。返回一个`QuerySet`对象,并且返回一个模型，而不是字典。
 
-`only`：跟`defer`类似，只不过`defer`是过滤掉指定的字段，而`only`是只提取指定的字段。
+```python
+    books = Book.objects.defer("name")
+    for book in books:
+        print(book.id)
+        #print(book.name)会查询到但是会重新查询数据库了，会浪费资源
+        print(type(book))#<class 'front.models.Book'> 类的模型
+    print(connection.queries)
+    #'sql': 'SELECT `book`.`id`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id` FROM `book`
+    #上面的sql语句过滤掉了 book.id语句
+```
 
-`get`：获取满足条件的数据。这个函数只能返回一条数据，并且如果给的条件有多条数据，那么这个方法会抛出`MultipleObjectsReturned`错误，如果给的条件没有任何数据，那么就会抛出`DoesNotExit`错误。所以这个方法在获取数据的只能，只能有且只有一条。
+11、`only`：跟`defer`类似，只不过`defer`是过滤掉指定的字段，而`only`是只提取指定的字段。同样会查询`id`返回一个`QuerySet`对象,并且返回一个模型，而不是字典。
 
-`create`：创建一条数据，并且保存到数据库中。这个方法相当于先用指定的模型创建一个对象，然后再调用这个对象的`save`方法。示例代码如下：
+```python
+    books = Book.objects.only("name")#只提取一个name
+    for book in books:
+        print(book.id,book.name)
+        print(type(book))#<class 'front.models.Book'> 类的模型
+    print(connection.queries)
+    # {'sql': 'SELECT `book`.`id`, `book`.`name` FROM `book`', 'time': '0.000'}
+```
+
+`only`和`defer`两个方法，如果没有指定的字段，后面请求的话，也会重新发起一次请求。是可以查询的，但是会影响资源，要谨慎使用！
+
+12、`get`：获取满足条件的数据。这个函数只能返回一条数据，并且如果给的条件有多条数据，那么这个方法会抛出`MultipleObjectsReturned`错误，如果给的条件没有任何数据，那么就会抛出`DoesNotExit`错误。所以这个方法在获取数据的只能，只能有且只有一条。
+
+13、`create`：创建一条数据，并且保存到数据库中。这个方法相当于先用指定的模型创建一个对象，然后再调用这个对象的`save`方法。示例代码如下：
 
 ```python
 article = Article(title='abc')
@@ -453,7 +475,7 @@ article.save()
 article = Article.objects.create(title='abc')
 ```
 
-`get_or_create`：根据某个条件进行查找，如果找到了那么就返回这条数据，如果没有查找到，那么就创建一个。示例代码如下：
+14、`get_or_create`：根据某个条件进行查找，如果找到了那么就返回这条数据，如果没有查找到，那么就创建一个。示例代码如下：
 
 ```python
 obj,created= Category.objects.get_or_create(title='默认分类')
@@ -462,7 +484,7 @@ obj,created= Category.objects.get_or_create(title='默认分类')
 如果有标题等于`默认分类`的分类，那么就会查找出来，如果没有，则会创建并且存储到数据库中。
 这个方法的返回值是一个元组，元组的第一个参数`obj`是这个对象，第二个参数`created`代表是否创建的。
 
-`bulk_create`：一次性创建多个数据。示例代码如下：
+15、`bulk_create`：一次性创建多个数据。示例代码如下：
 
 ```python
 Tag.objects.bulk_create([
