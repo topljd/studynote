@@ -242,7 +242,7 @@ for book in books:
 一定要注意的是，flat只能用在只有一个字段的情况下，否则就会报错！
 ```
 
-`all`：获取这个`ORM`模型的`QuerySet`对象。all在实际的应用中使用的比较少！
+7、`all`：获取这个`ORM`模型的`QuerySet`对象。all在实际的应用中使用的比较少！
 
 这个返回简单的返回一个`QuerySet`对象，这个`QuerySet`对象没有经过任何的修改（比如：过滤）等。
 
@@ -255,18 +255,38 @@ def index5(request):
     return HttpResponse("index5")
 ```
 
-`select_related`：在提取某个模型的数据的同时，也提前将相关联的数据提取出来。比如提取文章数据，可以使用`select_related`将`author`信息提取出来，以后再次使用`article.author`的时候就不需要再次去访问数据库了。可以减少数据库查询的次数。示例代码如下：
+8、`select_related`：在提取某个模型的数据的同时，也提前将相关联的数据提取出来。比如提取文章数据，可以使用`select_related`将`author`信息提取出来，以后再次使用`article.author`的时候就不需要再次去访问数据库了。可以减少数据库查询的次数。示例代码如下：
 
 ```python
  article = Article.objects.get(pk=1)
  >> article.author # 重新执行一次查询语句
  article = Article.objects.select_related("author").get(pk=2)
  >> article.author # 不需要重新执行查询语句了
+
+def index6(requeset):
+    #books = Book.objects.all()#应该是book关联的author字段中的名字，此时每次都需要查询语句有点浪费资源
+    books = Book.objects.select_related("author","publisher")#在一次查询中讲author查询出来了,这个地方只能使用外键的字段
+    for book in books:
+        #print(book.name)
+        print(book.author.name)
+        print(book.publisher.name)
+    '''
+    罗贯中
+    中国邮电出版社
+    施耐庵
+    中国邮电出版社
+    吴承恩
+    清华大学出版社
+    曹雪芹
+    清华大学出版社
+    '''
+    print(connection.queries[-1])
+    #'SELECT `author`.`id`, `author`.`name`, `author`.`age`, `author`.`email` FROM `author` WHERE `author`.`id` = 1 LIMIT 21'
 ```
 
-`selected_related`只能用在`一对多`或者`一对一`中，不能用在`多对多`或者`多对一`中。比如可以提前获取文章的作者，但是不能通过作者获取这个作者的文章，或者是通过某篇文章获取这个文章所有的标签。
+`selected_related`只能用在`一对多`或者`一对一`中，不能用在`多对多`或者`多对一`中。只能用在外键关联的对象身上。比如可以提前获取文章的作者，但是不能通过作者获取这个作者的文章，或者是通过某篇文章获取这个文章所有的标签。
 
-`prefetch_related`：这个方法和`select_related`非常的类似，就是在访问多个表中的数据的时候，减少查询的次数。这个方法是为了解决`多对一`和`多对多`的关系的查询问题。比如要获取标题中带有`hello`字符串的文章以及他的所有标签，示例代码如下：
+9、`prefetch_related`：这个方法和`select_related`非常的类似，就是在访问多个表中的数据的时候，减少查询的次数。这个方法是为了解决`多对一`和`多对多`的关系的查询问题。比如要获取标题中带有`hello`字符串的文章以及他的所有标签，示例代码如下：
 
 ```python
  from django.db import connection
@@ -279,6 +299,92 @@ def index5(request):
  # 通过以下代码可以看出以上代码执行的sql语句
  for sql in connection.queries:
      print(sql)
+    
+ def index7(request):
+    # books = Book.objects.all()
+    # for book in books:
+    #     print('='*30)
+    #     print(book.name)
+    #     orders = book.bookorder_set.all()#sql语句查询的次数多了
+    #     #对象.模型类小写_set.all 访问1对多模型
+    #     for order in orders:
+    #         print(order.id)
+    #     '''
+    #     三国演义
+    #     1
+    #     2
+    #     3
+    #     ==============================
+    #     水浒传
+    #     4
+    #     5
+    #     ==============================
+    #     西游记
+    #     ==============================
+    #     红楼梦
+    #     '''
+    print('*'*80)
+    # books = Book.objects.prefetch_related("bookorder_set")
+    # #将所有的book查询出来，更具book ID将订单查询出来！做了两次查询
+    # for book in books:
+    #     print('='*30)
+    #     print(book.name)
+    #     orders = book.bookorder_set.all()#sql语句查询的次数多了
+    #     #对象.模型类小写_set.all 访问1对多模型
+    #     for order in orders:
+    #         print(order.id)
+    # #print(connection.queries)
+    # #{'sql': 'SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id` FROM `book`', 'time': '0.000'}, {'sql': 'SELECT `book_order`.`id`, `book_order`.`price`, `book_order`.`book_id` FROM `book_order` WHERE `book_order`.`book_id` IN (1, 2, 3, 4)', 'time': '0.000'}
+    #
+    # books = Book.objects.prefetch_related('author')
+    # for book in books:
+    #     print(book.author.name)
+    #     '''
+    #     罗贯中
+    #     施耐庵
+    #     吴承恩
+    #     曹雪芹
+    #     '''
+    # print(connection.queries)
+    #'SELECT `author`.`id`, `author`.`name`, `author`.`age`, `author`.`email` FROM `author` WHERE `author`.`id` IN (1, 2, 3, 4)'
+#===========================================================
+    #过滤价格大于90元的
+    #传统做法
+    # books =Book.objects.prefetch_related('bookorder_set')
+    # #如果使用prefetch_related的时候，就不能使用类似filter产生新sql语句的方法
+    # for book in books:
+    #   print('='*50)
+    #   print(book.name)
+    #   orders = book.bookorder_set.filter(price__gte=90)#因使用filter，所以prefetch_related失效
+    #   for order in orders:
+    #     print(order.id)
+    # print(connection.queries)
+    '''
+    三国演义
+    1
+    ==================================================
+    水浒传
+    4
+    5
+    ==================================================
+    西游记
+    ==================================================
+    红楼梦
+    [{'sql': 'SELECT @@SQL_AUTO_IS_NULL', 'time': '0.000'}, {'sql': 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED', 'time': '0.000'}, {'sql': 'SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id` FROM `book`', 'time': '0.000'}, {'sql': 'SELECT `book_order`.`id`, `book_order`.`price`, `book_order`.`book_id` FROM `book_order` WHERE `book_order`.`book_id` IN (1, 2, 3, 4)', 'time': '0.000'}, {'sql': 'SELECT `book_order`.`id`, `book_order`.`price`, `book_order`.`book_id` FROM `book_order` WHERE (`book_order`.`book_id` = 1 AND `book_order`.`price` >= 90.0e0)', 'time': '0.000'}, {'sql': 'SELECT `book_order`.`id`, `book_order`.`price`, `book_order`.`book_id` FROM `book_order` WHERE (`book_order`.`book_id` = 2 AND `book_order`.`price` >= 90.0e0)', 'time': '0.000'}, {'sql': 'SELECT `book_order`.`id`, `book_order`.`price`, `book_order`.`book_id` FROM `book_order` WHERE (`book_order`.`book_id` = 3 AND `book_order`.`price` >= 90.0e0)', 'time': '0.000'}, {'sql': 'SELECT `book_order`.`id`, `book_order`.`price`, `book_order`.`book_id` FROM `book_order` WHERE (`book_order`.`book_id` = 4 AND `book_order`.`price` >= 90.0e0)', 'time': '0.000'}]
+        '''
+    #解决办法，使用Prefetch类
+    prefetch = Prefetch('bookorder_set',queryset=BookOrder.objects.filter(price__gte=90))
+    books = Book.objects.prefetch_related(prefetch)
+    for book in books:
+      print('='*50)
+      print(book.name)
+      orders = book.bookorder_set.all()
+      for order in orders:
+        print(order.id)
+    print(connection.queries)
+    #{'sql': 'SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id` FROM `book`', 'time': '0.000'}, {'sql': 'SELECT `book_order`.`id`, `book_order`.`price`, `book_order`.`book_id` FROM `book_order` WHERE (`book_order`.`price` >= 90.0e0 AND `book_order`.`book_id` IN (1, 2, 3, 4))', 'time': '0.000'}
+
+    return HttpResponse('index7')
 ```
 
 但是如果在使用`article.tag_set`的时候，如果又创建了一个新的`QuerySet`那么会把之前的`SQL`优化给破坏掉。比如以下代码：
