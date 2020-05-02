@@ -94,3 +94,8 @@ gitbook install
 
 > 至于插件可以再https://www.npmjs.com/search?q=gitbook进行搜索安装
 
+## 常见问题
+
+> 1、gitbook渲染的时候出现错误 template。比如在渲染django模板的时候 出现问题？
+
+解决办法：在代码的最前面和最后面添加` {%raw%}代码区域{%endraw%}`
