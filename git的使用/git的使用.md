@@ -173,4 +173,15 @@ git push -m study master
   ```
 
   一般的还是远程仓库中的文件与本地的文件不一样，需要先将远程仓库中的代码拉去到本地种！
-
+  
+  5、创建分支
+  
+  ```
+  $ git checkout -b iss53
+  Switched to a new branch "iss53"
+  上面是下面的简写
+  $ git branch iss53
+  $ git checkout iss53
+  ```
+  
+  
