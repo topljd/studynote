@@ -184,4 +184,40 @@ git push -m study master
   $ git checkout iss53
   ```
   
-  
+
+> 6、出现上传不了错误提示如下：
+>
+> ​	error: cannot pull with rebase: You have unstaged changes.
+> ​	error: please commit or stash them.
+
+解决办法：
+
+1.git pull –rebase 理解
+
+这个命令做了以下内容：
+a.把你 commit 到本地仓库的内容，取出来放到暂存区(stash)（这时你的工作区是干净的）
+b.然后从远端拉取代码到本地，由于工作区是干净的，所以不会有冲突
+c.从暂存区把你之前提交的内容取出来，跟拉下来的代码合并
+
+所以 rebase 在拉代码前要确保你本地工作区是干净的，如果你本地修改的内容没完全 commit 或者 stash，就会 rebase 失败。
+
+2.还是要听 git 提示的话，要理智，有什么不清楚的，就输入
+git status
+根据人家提示的来，该提交的提交，stash 的 stash。
+
+3.删除文件后需要 git add -A, 光 git add. 不行，区别如下：
+
+```
+git add 的几种参数区别
+git add -A 保存所有的修改
+git add . 保存新的添加和修改，但是不包括删除
+git add -u 保存修改和删除，但是不包括新建文件。
+```
+
+> 7、切换分支的时候里面本地文件夹中的文件也会发生变化
+
+![image-20200503141850437](images/image-20200503141850437.png)
+
+![image-20200503141938653](images/image-20200503141938653.png)
+
+> 8、
