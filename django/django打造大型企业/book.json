@@ -2,6 +2,6 @@
     "plugins": [
          "back-to-top-button",
          "expandable-chapters",
-          "splitter"
+         "-lunr", "-search", "search-pro"
     ]
 }

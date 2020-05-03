@@ -1,0 +1,581 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>005ORM模型基本的增删改查操作 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="006ORM常用Filed详解.html" />
+    
+    
+    <link rel="prev" href="004ORM模型.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Django打造大型企业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    第四章：数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="001django mysql安装及其一些软件.html">
+            
+                <a href="001django mysql安装及其一些软件.html">
+            
+                    
+                    001django mysql安装及其一些软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="002django使用原生sql语句操作数据库.html">
+            
+                <a href="002django使用原生sql语句操作数据库.html">
+            
+                    
+                    002django使用原生sql语句操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="003mysql图书管理系统.html">
+            
+                <a href="003mysql图书管理系统.html">
+            
+                    
+                    003mysql图书管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="004ORM模型.html">
+            
+                <a href="004ORM模型.html">
+            
+                    
+                    004ORM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="005ORM模型基本的增删改查操作.html">
+            
+                <a href="005ORM模型基本的增删改查操作.html">
+            
+                    
+                    005ORM模型基本的增删改查操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="006ORM常用Filed详解.html">
+            
+                <a href="006ORM常用Filed详解.html">
+            
+                    
+                    006ORM常用Filed详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="007navie时间和aware时间详解.html">
+            
+                <a href="007navie时间和aware时间详解.html">
+            
+                    
+                    007navie时间和aware时间详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="008meta类中常见配置.html">
+            
+                <a href="008meta类中常见配置.html">
+            
+                    
+                    008meta类中常见配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="009外链和表关系.html">
+            
+                <a href="009外链和表关系.html">
+            
+                    
+                    009外链和表关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="010ORM查询条件.html">
+            
+                <a href="010ORM查询条件.html">
+            
+                    
+                    010ORM查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="011ORM聚合函数.html">
+            
+                <a href="011ORM聚合函数.html">
+            
+                    
+                    011ORM聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="012F表达式和Q表达式.html">
+            
+                <a href="012F表达式和Q表达式.html">
+            
+                    
+                    012F表达式和Q表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="013Query Set API.html">
+            
+                <a href="013Query Set API.html">
+            
+                    
+                    013Query Set API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="014ORM作业.html">
+            
+                <a href="014ORM作业.html">
+            
+                    
+                    014ORM作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="015ORM模型迁移.html">
+            
+                <a href="015ORM模型迁移.html">
+            
+                    
+                    015ORM模型迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Django高级视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    123
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" >
+            
+                <span>
+            
+                    
+                    456
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" >
+            
+                <span>
+            
+                    
+                    789
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    212
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >005ORM模型基本的增删改查操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="orm&#x6A21;&#x578B;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;">ORM&#x6A21;&#x578B;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;</h4>
+<h5 id="&#x6DFB;&#x52A0;&#x6570;&#x636E;&#xFF1A;">&#x6DFB;&#x52A0;&#x6570;&#x636E;&#xFF1A;</h5>
+<p>&#x53EA;&#x8981;&#x4F7F;&#x7528;ORM&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;ORM&#x6A21;&#x578B;&#x7684;<code>save</code>&#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x4E86;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+<span class="hljs-comment"># Create your views here.</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-comment">#&#x4F7F;&#x7528;ORM&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x6570;&#x636E;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</span>
+    book = Book(name=<span class="hljs-string">&apos;&#x897F;&#x6E38;&#x8BB0;&apos;</span>,author=<span class="hljs-string">&apos;&#x5434;&#x627F;&#x6069;&apos;</span>,price=<span class="hljs-number">100</span>)
+    book.save()
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&quot;&#x4E66;&#x7C4D;&#x6DFB;&#x52A0;&#x6210;&#x529F;&quot;</span>)
+</code></pre>
+<h5 id="&#x67E5;&#x627E;&#x6570;&#x636E;">&#x67E5;&#x627E;&#x6570;&#x636E;</h5>
+<p>&#x6240;&#x6709;&#x7684;&#x67E5;&#x627E;&#x5DE5;&#x4F5C;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x6A21;&#x578B;&#x4E0A;&#x7684;<code>objects</code>&#x5C5E;&#x6027;&#x6765;&#x5B8C;&#x6210;&#x7684;</p>
+<p>&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x67E5;&#x8BE2;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x529F;&#x80FD;&#x4F1A;&#x5728;&#x540E;&#x8FB9;&#x8BB2;&#x5230;</p>
+<p>1&#x3001;&#x6839;&#x636E;&#x4E3B;&#x952E;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x4F7F;&#x7528;&#x4E3B;&#x952E;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>objects</code>&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x9012;<code>pk=xx</code></p>
+<p>&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">book = Book.objects.get(pk=<span class="hljs-number">2</span>)
+</code></pre>
+<p>2&#x3001;&#x6839;&#x636E;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF1A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>objects.filter</code>&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">book = Book.objects.filter(name=<span class="hljs-string">&apos;&#x897F;&#x6E38;&#x8BB0;&apos;</span>)  <span class="hljs-comment">#&#x8FD4;&#x56DE;&#x5168;&#x90E8;&#x4E3A;&#x897F;&#x6E38;&#x8BB0;&#x7684;&#x4E66;&#x7C4D;</span>
+<span class="hljs-comment">#&lt;QuerySet [&lt;Book: &lt;Book:(&#x897F;&#x6E38;&#x8BB0;,&#x5434;&#x627F;&#x6069;,100.0)&gt;&gt;]&gt;</span>
+book = Book.objects.filter(name=<span class="hljs-string">&apos;&#x897F;&#x6E38;&#x8BB0;&apos;</span>).first()
+<span class="hljs-comment">#&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x6761; &lt;Book:(&#x897F;&#x6E38;&#x8BB0;,&#x5434;&#x627F;&#x6069;,100.0)&gt;</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>fillter</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;<code>QuerySet</code>&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7C7B;&#x4F3C;&#x4E8E;&#x5217;&#x8868;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;<code>first</code>&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x3002;</p>
+<h5 id="&#x5220;&#x9664;&#x6570;&#x636E;">&#x5220;&#x9664;&#x6570;&#x636E;</h5>
+<p>&#x9996;&#x5148;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x6A21;&#x578B;&#x7684;<code>delete</code>&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#x5220;&#x9664;&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">book = Book.objects.get(pk=<span class="hljs-number">1</span>)
+book.delete()
+</code></pre>
+<h5 id="&#x4FEE;&#x6539;&#x6570;&#x636E;">&#x4FEE;&#x6539;&#x6570;&#x636E;</h5>
+<p>&#x9996;&#x5148;&#x67E5;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x6A21;&#x578B;&#x4E0A;&#x7684;&#x5C5E;&#x6027;&#x4E0A;&#x7684;&#x6A21;&#x578B;&#x7684;&#x503C;&#x3002;&#x5728;&#x6267;&#x884C;<code>save</code>&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"> book = Book.objects.get(pk=<span class="hljs-number">2</span>)
+ book.price = <span class="hljs-number">200</span>
+ book.save()
+</code></pre>
+<h5 id="class&#x7C7B;&#x8FD4;&#x56DE;&#x6837;&#x5F0F;&#xFF08;&#x6253;&#x5370;&#x7C7B;&#xFF09;">class&#x7C7B;&#x8FD4;&#x56DE;&#x6837;&#x5F0F;&#xFF08;&#x6253;&#x5370;&#x7C7B;&#xFF09;</h5>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
+
+<span class="hljs-comment"># Create your models here.</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Book</span><span class="hljs-params">(models.Model)</span>:</span>
+    <span class="hljs-comment">#id&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684; &#x4E3B;&#x952E; &#x81EA;&#x589E;</span>
+    name = models.CharField(max_length=<span class="hljs-number">100</span>,null=<span class="hljs-keyword">False</span>)
+    author = models.CharField(max_length=<span class="hljs-number">100</span>,null=<span class="hljs-keyword">False</span>)
+    price = models.FloatField(default=<span class="hljs-number">0</span>)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment">#&lt;Book:(name,author,price)&gt;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&lt;Book:({name},{author},{price})&gt;&apos;</span>.format(name=self.name,author=self.author,price=self.price)
+</code></pre>
+<blockquote>
+<p>_<em>str_</em>()&#x662F;class&#x7684;&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6253;&#x5370;&#x7684;&#x6837;&#x5F0F;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="004ORM模型.html" class="navigation navigation-prev " aria-label="Previous page: 004ORM模型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="006ORM常用Filed详解.html" class="navigation navigation-next " aria-label="Next page: 006ORM常用Filed详解">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"005ORM模型基本的增删改查操作","level":"1.2.5","depth":2,"next":{"title":"006ORM常用Filed详解","level":"1.2.6","depth":2,"path":"第四章：数据库/006ORM常用Filed详解.md","ref":"第四章：数据库/006ORM常用Filed详解.md","articles":[]},"previous":{"title":"004ORM模型","level":"1.2.4","depth":2,"path":"第四章：数据库/004ORM模型.md","ref":"第四章：数据库/004ORM模型.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","expandable-chapters","-lunr","-search","search-pro"],"pluginsConfig":{"back-to-top-button":{},"expandable-chapters":{},"search-pro":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"第四章：数据库/005ORM模型基本的增删改查操作.md","mtime":"2020-05-03T03:28:17.852Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-03T07:45:29.334Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
