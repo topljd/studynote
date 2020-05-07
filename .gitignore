@@ -8,3 +8,4 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 origin
+/node_modules/
