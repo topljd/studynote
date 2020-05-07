@@ -224,4 +224,98 @@ git add -u 保存修改和删除，但是不包括新建文件。
 
 ![image-20200506134847288](images/image-20200506134847288.png)
 
-> 
+> 9、git删除本地分支、删除远程分支
+
+1、查看所有分支
+
+`git branch -a`
+
+```shell
+$ git branch -a
+  coding-pages
+  gh-pages
+* master    # * 表示当前分支
+# 下面是远程分支
+  remotes/origin/gh-pages
+  remotes/origin/master
+  remotes/origin_coding/coding-pages
+  remotes/origin_coding/master
+  remotes/origin_gitee/master
+  ########
+  $ git branch -r #查看远程分支
+  origin/gh-pages
+  origin/master
+  origin_coding/coding-pages
+  origin_coding/master
+  origin_gitee/master
+```
+
+2、查看当前所在分支
+
+`git branch`
+
+3、删除本地的XXX分支
+
+`git branch -d XXX`
+
+4、删除远程的XXX分支
+
+`git push origin --delete XXX`远程的话一般是双`-`
+
+> 10、拉取远程分支并创建本地分支
+
+1、`git checkout -b 本地分支名x origin/远程分支名x`
+
+使用该方式会在本地新建分支x，并自动切换到该本地分支x。
+
+2、`git fetch origin 远程分支名x:本地分支名x`
+
+使用该方式会在本地新建分支x，但是不会自动切换到该本地分支x，需要手动checkout。
+
+3、`git branch -vv`**查看本地分支与远程分支映射关系**
+
+```shell
+$ git branch -vv
+  coding-pages df545e4 [origin/coding-pages: gone] 删除所有pages文件
+  gh-pages     6d2697e [origin/gh-pages] 2020年5月7日10:42:39
+* master       cdb916a [origin_coding/master: ahead 1] 2020年5月7日10:26:37 提交ignore
+```
+
+4、`git branch -u origin/addFile`或`git branch --set-upstream-to origin/addFile`建立当前分支与远程分支的映射。
+
+![image-20200507111308340](images/image-20200507111308340.png)
+
+查看当前本地分支与远程分支映射关系结果如下：
+
+![image-20200507111343848](images/image-20200507111343848.png)
+
+此时再次拉取，成功信息如下：
+
+`git pull`
+
+```
+Already up-to-date
+```
+
+再次推送，成功信息如下：
+
+`git push`
+
+```
+Everything up-to-date
+```
+
+5、撤销本地分支与远程分支的映射关系
+
+`git branch --unset-upstream`使用`git branch -vv`查看映射关系
+
+![image-20200507111754906](images/image-20200507111754906.png)
+
+6、可以本地分支A名和远程分支B名建立映射关系
+
+![image-20200507112009696](images/image-20200507112009696.png)
+
+并且此时可以把本地分支A提交到分支B分支中去：
+
+![image-20200507112053057](images/image-20200507112053057.png)
+
