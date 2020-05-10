@@ -319,3 +319,11 @@ Everything up-to-date
 
 ![image-20200507112053057](images/image-20200507112053057.png)
 
+>  11、failed to push some refs  当push上传不了出现如下提示的时候
+
+![image-20200510204125869](images/image-20200510204125869.png)
+
+解决方案：远程仓库与本地仓库代码不一样，上传不了！（远程仓库有其他的文件)
+
+方法：1、`git pull origin master`将远程文件拉取到本地。再次执行`git add .`等系列动作上传。此时一切正常！
+
