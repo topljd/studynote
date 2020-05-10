@@ -113,7 +113,7 @@ def null_text_field(request):
     return HttpResponse('null')
 ```
 
-![image-20200408180431209](C:\Users\82023\AppData\Roaming\Typora\typora-user-images\image-20200408180431209.png)
+![1589120505066](H:\studynote\django\django打造大型企业\第四章：数据库\images\1589120505066.png)
 
 #### blank
 

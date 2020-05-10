@@ -85,7 +85,9 @@ def index(request):
 
 可以查看官方的文档
 
-  ![image-20200405150443726](C:\Users\82023\AppData\Roaming\Typora\typora-user-images\image-20200405150443726.png)
+![1589120279264](H:\studynote\django\django打造大型企业\第四章：数据库\images\1589120279264.png)
+
+
 
 
 
