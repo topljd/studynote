@@ -1,0 +1,875 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第七节：加载静态文件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="第六节：模板结构优化.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    笔记文档介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../git的使用/git的使用.html">
+            
+                <a href="../../../git的使用/git的使用.html">
+            
+                    
+                    git的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../gitbook的使用/快速使用gitbook.html">
+            
+                <a href="../../../gitbook的使用/快速使用gitbook.html">
+            
+                    
+                    gitbook的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    django打造大型企业
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    第一章：学前准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                <a href="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                    
+                    第一节：虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../第一章：学前准备/第二节：准备工作.html">
+            
+                <a href="../第一章：学前准备/第二节：准备工作.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../第一章：学前准备/第三节：Django介绍.html">
+            
+                <a href="../第一章：学前准备/第三节：Django介绍.html">
+            
+                    
+                    第三节：Django介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                <a href="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                    
+                    第四节：URL组成部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    第二章：URL与视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                <a href="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                    
+                    第一节：第一个Django项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                <a href="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    第三章：模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="第一节：模板介绍.html">
+            
+                <a href="第一节：模板介绍.html">
+            
+                    
+                    第一节：模板介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="第二节：模板变量.html">
+            
+                <a href="第二节：模板变量.html">
+            
+                    
+                    第二节：模板变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="第三节：常用标签.html">
+            
+                <a href="第三节：常用标签.html">
+            
+                    
+                    第三节：常用标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="第四节：常用过滤器.html">
+            
+                <a href="第四节：常用过滤器.html">
+            
+                    
+                    第四节：常用过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="第五节：自定义过滤.html">
+            
+                <a href="第五节：自定义过滤.html">
+            
+                    
+                    第五节：自定义过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="第六节：模板结构优化.html">
+            
+                <a href="第六节：模板结构优化.html">
+            
+                    
+                    第六节：模板结构优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3.7" data-path="第七节：加载静态文件.html">
+            
+                <a href="第七节：加载静态文件.html">
+            
+                    
+                    第七节：加载静态文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    第四章：数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                <a href="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                    
+                    001django mysql安装及其一些软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                <a href="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                    
+                    002django使用原生sql语句操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../第四章：数据库/003mysql图书管理系统.html">
+            
+                <a href="../第四章：数据库/003mysql图书管理系统.html">
+            
+                    
+                    003mysql图书管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../第四章：数据库/004ORM模型.html">
+            
+                <a href="../第四章：数据库/004ORM模型.html">
+            
+                    
+                    004ORM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                <a href="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                    
+                    005ORM模型基本的增删改查操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.6" data-path="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                <a href="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                    
+                    006ORM常用Filed详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                <a href="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                    
+                    007navie时间和aware时间详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="../第四章：数据库/008meta类中常见配置.html">
+            
+                <a href="../第四章：数据库/008meta类中常见配置.html">
+            
+                    
+                    008meta类中常见配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="../第四章：数据库/009外链和表关系.html">
+            
+                <a href="../第四章：数据库/009外链和表关系.html">
+            
+                    
+                    009外链和表关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="../第四章：数据库/010ORM查询条件.html">
+            
+                <a href="../第四章：数据库/010ORM查询条件.html">
+            
+                    
+                    010ORM查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="../第四章：数据库/011ORM聚合函数.html">
+            
+                <a href="../第四章：数据库/011ORM聚合函数.html">
+            
+                    
+                    011ORM聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                <a href="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                    
+                    012F表达式和Q表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="../第四章：数据库/013Query Set API.html">
+            
+                <a href="../第四章：数据库/013Query Set API.html">
+            
+                    
+                    013Query_Set_API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="../第四章：数据库/014ORM作业.html">
+            
+                <a href="../第四章：数据库/014ORM作业.html">
+            
+                    
+                    014ORM作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="../第四章：数据库/015ORM模型迁移.html">
+            
+                <a href="../第四章：数据库/015ORM模型迁移.html">
+            
+                    
+                    015ORM模型迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    第五章：高级视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                <a href="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                    
+                    5.1 第一节：限制请求method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                <a href="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                    
+                    5.2 第二节：页面重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                <a href="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                    
+                    5.3 第三节：HttpRequst对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                <a href="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                    
+                    5.4 第四节：HttpResponse对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                <a href="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                    
+                    5.5 第五节：生成csv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                <a href="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                    
+                    5.6 第六节：类视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                <a href="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                    
+                    5.7 第七节：错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../php/README.md">
+            
+                <span>
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >第七节：加载静态文件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x6587;&#x4EF6;">&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x6587;&#x4EF6;</h1>
+<p>&#x5728;&#x4E00;&#x4E2A;&#x7F51;&#x9875;&#x4E2D;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x53EA;&#x6709;&#x4E00;&#x4E2A;<code>html</code>&#x9AA8;&#x67B6;&#xFF0C;&#x8FD8;&#x9700;&#x8981;<code>css</code>&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#xFF0C;<code>js</code>&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x56FE;&#x7247;&#x7B49;&#x3002;&#x56E0;&#x6B64;&#x5728;<code>DTL</code>&#x4E2D;&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5728;<code>DTL</code>&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;<code>static</code>&#x6807;&#x7B7E;&#x6765;&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x3002;&#x8981;&#x4F7F;&#x7528;<code>static</code>&#x6807;&#x7B7E;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;<code>{% load static %}</code>&#x3002;&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li><p>&#x9996;&#x5148;&#x786E;&#x4FDD;<code>django.contrib.staticfiles</code>&#x5DF2;&#x7ECF;&#x6DFB;&#x52A0;&#x5230;<code>settings.INSTALLED_APPS</code>&#x4E2D;&#x3002;</p>
+</li>
+<li><p>&#x786E;&#x4FDD;&#x5728;<code>settings.py</code>&#x4E2D;&#x8BBE;&#x7F6E;&#x4E86;<code>STATIC_URL</code>&#x3002;</p>
+</li>
+<li><p>&#x5728;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;&#x7684;<code>app</code>&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x53EB;&#x505A;<code>static</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;&#x8FD9;&#x4E2A;<code>static</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5F53;&#x524D;<code>app</code>&#x7684;&#x540D;&#x5B57;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x518D;&#x628A;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x653E;&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x3002;&#x4F8B;&#x5982;&#x4F60;&#x7684;<code>app</code>&#x53EB;&#x505A;<code>book</code>&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x53EB;&#x505A;<code>zhiliao.jpg</code>&#xFF0C;&#x90A3;&#x4E48;&#x8DEF;&#x5F84;&#x4E3A;<code>book/static/book/zhiliao.jpg</code>&#x3002;&#xFF08;&#x4E3A;&#x4EC0;&#x4E48;&#x5728;<code>app</code>&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>static</code>&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5728;&#x8FD9;&#x4E2A;<code>static</code>&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540C;<code>app</code>&#x540D;&#x5B57;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x5462;&#xFF1F;&#x539F;&#x56E0;&#x662F;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x628A;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x653E;&#x5728;<code>static</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x6A21;&#x7248;&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x662F;&#x4F7F;&#x7528;<code>zhiliao.jpg</code>&#xFF0C;&#x5982;&#x679C;&#x5728;&#x591A;&#x4E2A;<code>app</code>&#x4E4B;&#x95F4;&#x6709;&#x540C;&#x540D;&#x7684;&#x9759;&#x6001;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x6DF7;&#x6DC6;&#x3002;&#x800C;&#x5728;<code>static</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x540C;&#x540D;<code>app</code>&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x6A21;&#x7248;&#x4E2D;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x662F;&#x4F7F;&#x7528;<code>app/zhiliao.jpg</code>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x4EA7;&#x751F;&#x6DF7;&#x6DC6;&#x3002;&#xFF09;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x6709;&#x4E00;&#x4E9B;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x662F;&#x4E0D;&#x548C;&#x4EFB;&#x4F55;<code>app</code>&#x6302;&#x94A9;&#x7684;&#x3002;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5728;<code>settings.py</code>&#x4E2D;&#x6DFB;&#x52A0;<code>STATICFILES_DIRS</code>&#xFF0C;&#x4EE5;&#x540E;<code>DTL</code>&#x5C31;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x7684;&#x8DEF;&#x5F84;&#x4E2D;&#x67E5;&#x627E;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x3002;&#x6BD4;&#x5982;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;:</p>
+<pre><code class="lang-python"> STATICFILES_DIRS = [
+     os.path.join(BASE_DIR,<span class="hljs-string">&quot;static&quot;</span>)
+ ]
+</code></pre>
+</li>
+<li><p>&#x5728;&#x6A21;&#x7248;&#x4E2D;&#x4F7F;&#x7528;<code>load</code>&#x6807;&#x7B7E;&#x52A0;&#x8F7D;<code>static</code>&#x6807;&#x7B7E;&#x3002;&#x6BD4;&#x5982;&#x8981;&#x52A0;&#x8F7D;&#x5728;&#x9879;&#x76EE;&#x7684;<code>static</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;<code>style.css</code>&#x7684;&#x6587;&#x4EF6;&#x3002;&#x90A3;&#x4E48;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"> {% load static %}
+ <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;{% static &apos;style.css&apos; %}&quot;</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x6BCF;&#x6B21;&#x5728;&#x6A21;&#x7248;&#x4E2D;&#x52A0;&#x8F7D;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x90FD;&#x4F7F;&#x7528;<code>load</code>&#x52A0;&#x8F7D;<code>static</code>&#x6807;&#x7B7E;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5728;<code>settings.py</code>&#x4E2D;&#x7684;<code>TEMPLATES/OPTIONS</code>&#x6DFB;&#x52A0;<code>&apos;builtins&apos;:[&apos;django.templatetags.static&apos;]</code>&#xFF0C;&#x8FD9;&#x6837;&#x4EE5;&#x540E;&#x5728;&#x6A21;&#x7248;&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>static</code>&#x6807;&#x7B7E;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x624B;&#x52A8;&#x7684;<code>load</code>&#x4E86;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5728;<code>settings.INSTALLED_APPS</code>&#x4E2D;&#x6DFB;&#x52A0;<code>django.contrib.staticfiles</code>&#x3002;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x624B;&#x52A8;&#x7684;&#x5C06;&#x8BF7;&#x6C42;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;<code>url</code>&#x4E0E;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x8FDB;&#x884C;&#x6620;&#x5C04;&#x4E86;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.conf <span class="hljs-keyword">import</span> settings
+<span class="hljs-keyword">from</span> django.conf.urls.static <span class="hljs-keyword">import</span> static
+
+urlpatterns = [
+    <span class="hljs-comment"># &#x5176;&#x4ED6;&#x7684;url&#x6620;&#x5C04;</span>
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+</code></pre>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="第六节：模板结构优化.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第六节：模板结构优化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第七节：加载静态文件","level":"1.4.3.7","depth":3,"next":{"title":"第四章：数据库","level":"1.4.4","depth":2,"ref":"","articles":[{"title":"001django mysql安装及其一些软件","level":"1.4.4.1","depth":3,"path":"django/django打造大型企业/第四章：数据库/001django mysql安装及其一些软件.md","ref":"django/django打造大型企业/第四章：数据库/001django mysql安装及其一些软件.md","articles":[]},{"title":"002django使用原生sql语句操作数据库","level":"1.4.4.2","depth":3,"path":"django/django打造大型企业/第四章：数据库/002django使用原生sql语句操作数据库.md","ref":"django/django打造大型企业/第四章：数据库/002django使用原生sql语句操作数据库.md","articles":[]},{"title":"003mysql图书管理系统","level":"1.4.4.3","depth":3,"path":"django/django打造大型企业/第四章：数据库/003mysql图书管理系统.md","ref":"django/django打造大型企业/第四章：数据库/003mysql图书管理系统.md","articles":[]},{"title":"004ORM模型","level":"1.4.4.4","depth":3,"path":"django/django打造大型企业/第四章：数据库/004ORM模型.md","ref":"django/django打造大型企业/第四章：数据库/004ORM模型.md","articles":[]},{"title":"005ORM模型基本的增删改查操作","level":"1.4.4.5","depth":3,"path":"django/django打造大型企业/第四章：数据库/005ORM模型基本的增删改查操作.md","ref":"django/django打造大型企业/第四章：数据库/005ORM模型基本的增删改查操作.md","articles":[]},{"title":"006ORM常用Filed详解","level":"1.4.4.6","depth":3,"path":"django/django打造大型企业/第四章：数据库/006ORM常用Filed详解.md","ref":"django/django打造大型企业/第四章：数据库/006ORM常用Filed详解.md","articles":[]},{"title":"007navie时间和aware时间详解","level":"1.4.4.7","depth":3,"path":"django/django打造大型企业/第四章：数据库/007navie时间和aware时间详解.md","ref":"django/django打造大型企业/第四章：数据库/007navie时间和aware时间详解.md","articles":[]},{"title":"008meta类中常见配置","level":"1.4.4.8","depth":3,"path":"django/django打造大型企业/第四章：数据库/008meta类中常见配置.md","ref":"django/django打造大型企业/第四章：数据库/008meta类中常见配置.md","articles":[]},{"title":"009外链和表关系","level":"1.4.4.9","depth":3,"path":"django/django打造大型企业/第四章：数据库/009外链和表关系.md","ref":"django/django打造大型企业/第四章：数据库/009外链和表关系.md","articles":[]},{"title":"010ORM查询条件","level":"1.4.4.10","depth":3,"path":"django/django打造大型企业/第四章：数据库/010ORM查询条件.md","ref":"django/django打造大型企业/第四章：数据库/010ORM查询条件.md","articles":[]},{"title":"011ORM聚合函数","level":"1.4.4.11","depth":3,"path":"django/django打造大型企业/第四章：数据库/011ORM聚合函数.md","ref":"django/django打造大型企业/第四章：数据库/011ORM聚合函数.md","articles":[]},{"title":"012F表达式和Q表达式","level":"1.4.4.12","depth":3,"path":"django/django打造大型企业/第四章：数据库/012F表达式和Q表达式.md","ref":"django/django打造大型企业/第四章：数据库/012F表达式和Q表达式.md","articles":[]},{"title":"013Query_Set_API","level":"1.4.4.13","depth":3,"path":"django/django打造大型企业/第四章：数据库/013Query Set API.md","ref":"django/django打造大型企业/第四章：数据库/013Query Set API.md","articles":[]},{"title":"014ORM作业","level":"1.4.4.14","depth":3,"path":"django/django打造大型企业/第四章：数据库/014ORM作业.md","ref":"django/django打造大型企业/第四章：数据库/014ORM作业.md","articles":[]},{"title":"015ORM模型迁移","level":"1.4.4.15","depth":3,"path":"django/django打造大型企业/第四章：数据库/015ORM模型迁移.md","ref":"django/django打造大型企业/第四章：数据库/015ORM模型迁移.md","articles":[]}]},"previous":{"title":"第六节：模板结构优化","level":"1.4.3.6","depth":3,"path":"django/django打造大型企业/第三章：模板/第六节：模板结构优化.md","ref":"django/django打造大型企业/第三章：模板/第六节：模板结构优化.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","expandable-chapters","-lunr","-search","search-pro","livereload"],"pluginsConfig":{"back-to-top-button":{},"expandable-chapters":{},"search-pro":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"django/django打造大型企业/第三章：模板/第七节：加载静态文件.md","mtime":"2020-05-10T15:22:44.606Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-10T15:32:49.629Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -85,7 +85,9 @@ def index(request):
 
 可以查看官方的文档
 
-  ![image-20200405150443726](C:\Users\82023\AppData\Roaming\Typora\typora-user-images\image-20200405150443726.png)
+![1589122422814](images/1589122422814.png)
+
+
 
 
 

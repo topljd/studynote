@@ -1,0 +1,938 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>006ORM常用Filed详解 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="007navie时间和aware时间详解.html" />
+    
+    
+    <link rel="prev" href="005ORM模型基本的增删改查操作.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    笔记文档介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../git的使用/git的使用.html">
+            
+                <a href="../../../git的使用/git的使用.html">
+            
+                    
+                    git的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../gitbook的使用/快速使用gitbook.html">
+            
+                <a href="../../../gitbook的使用/快速使用gitbook.html">
+            
+                    
+                    gitbook的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    django打造大型企业
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    第一章：学前准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                <a href="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                    
+                    第一节：虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../第一章：学前准备/第二节：准备工作.html">
+            
+                <a href="../第一章：学前准备/第二节：准备工作.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../第一章：学前准备/第三节：Django介绍.html">
+            
+                <a href="../第一章：学前准备/第三节：Django介绍.html">
+            
+                    
+                    第三节：Django介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                <a href="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                    
+                    第四节：URL组成部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    第二章：URL与视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                <a href="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                    
+                    第一节：第一个Django项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                <a href="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    第三章：模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../第三章：模板/第一节：模板介绍.html">
+            
+                <a href="../第三章：模板/第一节：模板介绍.html">
+            
+                    
+                    第一节：模板介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../第三章：模板/第二节：模板变量.html">
+            
+                <a href="../第三章：模板/第二节：模板变量.html">
+            
+                    
+                    第二节：模板变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../第三章：模板/第三节：常用标签.html">
+            
+                <a href="../第三章：模板/第三节：常用标签.html">
+            
+                    
+                    第三节：常用标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../第三章：模板/第四节：常用过滤器.html">
+            
+                <a href="../第三章：模板/第四节：常用过滤器.html">
+            
+                    
+                    第四节：常用过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../第三章：模板/第五节：自定义过滤.html">
+            
+                <a href="../第三章：模板/第五节：自定义过滤.html">
+            
+                    
+                    第五节：自定义过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../第三章：模板/第六节：模板结构优化.html">
+            
+                <a href="../第三章：模板/第六节：模板结构优化.html">
+            
+                    
+                    第六节：模板结构优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="../第三章：模板/第七节：加载静态文件.html">
+            
+                <a href="../第三章：模板/第七节：加载静态文件.html">
+            
+                    
+                    第七节：加载静态文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    第四章：数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="001django mysql安装及其一些软件.html">
+            
+                <a href="001django mysql安装及其一些软件.html">
+            
+                    
+                    001django mysql安装及其一些软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="002django使用原生sql语句操作数据库.html">
+            
+                <a href="002django使用原生sql语句操作数据库.html">
+            
+                    
+                    002django使用原生sql语句操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="003mysql图书管理系统.html">
+            
+                <a href="003mysql图书管理系统.html">
+            
+                    
+                    003mysql图书管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="004ORM模型.html">
+            
+                <a href="004ORM模型.html">
+            
+                    
+                    004ORM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.5" data-path="005ORM模型基本的增删改查操作.html">
+            
+                <a href="005ORM模型基本的增删改查操作.html">
+            
+                    
+                    005ORM模型基本的增删改查操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4.6" data-path="006ORM常用Filed详解.html">
+            
+                <a href="006ORM常用Filed详解.html">
+            
+                    
+                    006ORM常用Filed详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.7" data-path="007navie时间和aware时间详解.html">
+            
+                <a href="007navie时间和aware时间详解.html">
+            
+                    
+                    007navie时间和aware时间详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.8" data-path="008meta类中常见配置.html">
+            
+                <a href="008meta类中常见配置.html">
+            
+                    
+                    008meta类中常见配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.9" data-path="009外链和表关系.html">
+            
+                <a href="009外链和表关系.html">
+            
+                    
+                    009外链和表关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.10" data-path="010ORM查询条件.html">
+            
+                <a href="010ORM查询条件.html">
+            
+                    
+                    010ORM查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.11" data-path="011ORM聚合函数.html">
+            
+                <a href="011ORM聚合函数.html">
+            
+                    
+                    011ORM聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.12" data-path="012F表达式和Q表达式.html">
+            
+                <a href="012F表达式和Q表达式.html">
+            
+                    
+                    012F表达式和Q表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.13" data-path="013Query Set API.html">
+            
+                <a href="013Query Set API.html">
+            
+                    
+                    013Query_Set_API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.14" data-path="014ORM作业.html">
+            
+                <a href="014ORM作业.html">
+            
+                    
+                    014ORM作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.15" data-path="015ORM模型迁移.html">
+            
+                <a href="015ORM模型迁移.html">
+            
+                    
+                    015ORM模型迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    第五章：高级视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                <a href="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                    
+                    5.1 第一节：限制请求method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                <a href="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                    
+                    5.2 第二节：页面重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                <a href="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                    
+                    5.3 第三节：HttpRequst对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                <a href="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                    
+                    5.4 第四节：HttpResponse对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                <a href="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                    
+                    5.5 第五节：生成csv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                <a href="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                    
+                    5.6 第六节：类视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                <a href="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                    
+                    5.7 第七节：错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../php/README.md">
+            
+                <span>
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >006ORM常用Filed详解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="&#x6A21;&#x578B;&#x5E38;&#x7528;&#x5C5E;&#x6027;">&#x6A21;&#x578B;&#x5E38;&#x7528;&#x5C5E;&#x6027;</h4>
+<h5 id="&#x5E38;&#x7528;&#x5B57;&#x6BB5;&#xFF1A;">&#x5E38;&#x7528;&#x5B57;&#x6BB5;&#xFF1A;</h5>
+<p>&#x5728;Django&#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;Field&#x6765;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x6765;&#x8FDB;&#x884C;&#x6620;&#x5C04;&#x3002;&#x4EE5;&#x4E0B;&#x5C06;&#x4ECB;&#x7ECD;&#x90A3;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x3002;</p>
+<hr>
+<h6 id="autofield&#xFF1A;">AutoField&#xFF1A;</h6>
+<p>&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;<code>int</code>&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x81EA;&#x52A8;&#x589E;&#x957F;&#x7684;&#x7279;&#x6027;&#x3002;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x4E3B;&#x952E;&#xFF0C;&#x90A3;&#x4E48;&#x6A21;&#x578B;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x53EB;<code>id</code>&#x7684;&#x81EA;&#x52A8;&#x589E;&#x957F;&#x7684;&#x4E3B;&#x952E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5176;&#x4ED6;&#x540D;&#x5B57;&#x7684;&#x5E76;&#x4E14;&#x5177;&#x6709;&#x81EA;&#x52A8;&#x589E;&#x957F;&#x7684;&#x4E3B;&#x952E;&#xFF0C;&#x4F7F;&#x7528;<code>AutoField</code>&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;</p>
+<h6 id="bigautofield">BigAutoField</h6>
+<p>64&#x4F4D;&#x7684;&#x6574;&#x578B;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;AutoFiled&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x4EA7;&#x751F;&#x7684;&#x6570;&#x636E;&#x7684;&#x8303;&#x56F4;&#x662F;&#x4ECE;<code>1-9223372036854775807</code></p>
+<h6 id="booleanfield">BooleanField</h6>
+<p>&#x5728;&#x6A21;&#x578B;&#x5C42;&#x9762;&#x63A5;&#x53D7;&#x7684;&#x662F;<code>True/False</code>&#x3002;&#x5728;&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x662F;<code>tinyint</code>&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;None&#x3002;</p>
+<h6 id="charfiled">CharFiled</h6>
+<p>&#x5728;&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x662F;<code>varchar</code>&#x7C7B;&#x578B;&#x3002;&#x5728;python&#x5C42;&#x9762;&#x5C31;&#x662F;&#x666E;&#x901A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5FC5;&#x987B;&#x8981;&#x6307;&#x5B9A;&#x6700;&#x5927;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x4E5F;&#x5373;&#x5FC5;&#x987B;&#x8981;&#x4F20;&#x9012;<code>max_length</code>&#x8FD9;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x8FDB;&#x53BB;&#x3002;</p>
+<h6 id="datefield">DateField</h6>
+<p>&#x65E5;&#x671F;&#x7C7B;&#x578B;&#xFF1A;&#x5728;python&#x4E2D;&#x662F;<code>datatime.date</code>&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x8BB0;&#x5F55;&#x5E74;&#x6708;&#x65E5;&#xFF0C;&#x5728;&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4E5F;&#x662F;<code>date</code>&#x7C7B;&#x578B;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;<code>field</code>&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<p>1&#x3001;<code>auto_now</code>&#x5728;&#x6BCF;&#x6B21;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x7684;&#x65F6;&#x5019;&#x540E;&#xFF0C;&#x90FD;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x6BD4;&#x5982;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x4FEE;&#x6539;&#x65E5;&#x671F;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;<code>True</code></p>
+<p>2&#x3001;<code>auto_now_add</code>&#x5728;&#x6BCF;&#x6B21;&#x6570;&#x636E;&#x7B2C;&#x4E00;&#x6B21;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF0C;&#x6BD4;&#x5982;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x7B2C;&#x4E00;&#x6B21;&#x5165;&#x5E93;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;<code>True</code>&#x3002;</p>
+<h6 id="datetimefield&#xFF1A;">DateTimeField&#xFF1A;</h6>
+<p>&#x65E5;&#x671F;&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;<code>DataField</code>&#x3002;&#x4E0D;&#x4EC5;&#x4EC5;&#x5B58;&#x50A8;&#x65E5;&#x671F;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x65F6;&#x95F4;&#x3002;&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;<code>datetime</code>&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x4E2A;<code>filed</code>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>auto_now</code>&#x548C;<code>auto_now_add</code>&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x3002;</p>
+<h6 id="timefield&#xFF1A;">TimeField&#xFF1A;</h6>
+<p>&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#x3002;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x662F;<code>time</code>&#x7C7B;&#x578B;&#x3002;&#x5728;python&#x4E2D;&#x662F;<code>datetime.time</code>&#x7C7B;&#x578B;&#x3002;</p>
+<h6 id="emailfield">EmailField:</h6>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;<code>CharField</code>&#x3002;&#x5728;&#x6570;&#x636E;&#x5E93;&#x5E95;&#x5C42;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;<code>varchar</code>&#x7C7B;&#x578B;&#x3002;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x662F;254&#x5B57;&#x7B26;&#x3002;</p>
+<pre><code>EmailField&#x5728;&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x5E76;&#x4E0D;&#x4F1A;&#x9650;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x4E00;&#x5B9A;&#x8981;&#x6EE1;&#x8DB3;&#x90AE;&#x7BB1;&#x683C;&#x5F0F;
+&#x53EA;&#x662F;&#x4EE5;&#x540E;&#x518D;&#x4F7F;&#x7528;modelForm&#x7B49;&#x8868;&#x5355;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#x56DE;&#x8D77;&#x4F5C;&#x7528;
+</code></pre><h6 id="filefield">FileField</h6>
+<p>&#x7528;&#x6765;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x8003;&#x540E;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x6587;&#x7AE0;&#x8282;&#x90E8;&#x5206;&#x3002;</p>
+<h6 id="imagefiled">ImageFiled</h6>
+<p>&#x7528;&#x6765;&#x5B58;&#x50A8;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x8BF7;&#x53C2;&#x8003;&#x540E;&#x9762;&#x7684;&#x56FE;&#x7247;&#x4E0A;&#x4F20;&#x7AE0;&#x8282;&#x90E8;&#x5206;&#x3002;</p>
+<h6 id="floatfield">FloatField</h6>
+<p>&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x3002;&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x662F;<code>float</code>&#x7C7B;&#x578B;&#x3002;</p>
+<h6 id="integerfield">IntegerField</h6>
+<p>&#x6574;&#x578B;&#x3002;&#x503C;&#x5F97;&#x533A;&#x95F4;&#x662F;<code>-2147483648&#x2014;&#x2014;2147483647</code>.</p>
+<h6 id="biginterfield">BigInterField</h6>
+<p>&#x5927;&#x6574;&#x578B;&#x3002;&#x503C;&#x7684;&#x533A;&#x95F4;&#x662F;<code>-9223372036854775808&#x2014;&#x2014;9223372036854775807</code>.</p>
+<h6 id="positiveintegerfield">PositiveIntegerField</h6>
+<p>&#x6B63;&#x6574;&#x578B;&#x3002;&#x503C;&#x5F97;&#x533A;&#x95F4;&#x662F;<code>0-2147483647</code></p>
+<h6 id="smallintegerfield">SmallIntegerField:</h6>
+<p>&#x5C0F;&#x6574;&#x578B;&#xFF0C;&#x503C;&#x5F97;&#x533A;&#x95F4;&#x662F;<code>-32768-32767</code></p>
+<h6 id="positivesmallintegerfield">PositiveSmallIntegerField:</h6>
+<p>&#x6B63;&#x5C0F;&#x6574;&#x578B;&#x3002;&#x503C;&#x5F97;&#x533A;&#x95F4;&#x662F;<code>0-32767</code></p>
+<h6 id="textfield">TextField:</h6>
+<p>&#x5927;&#x91CF;&#x7684;&#x6587;&#x672C;&#x7C7B;&#x578B;&#x3002;&#x6620;&#x5C04;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x662F;longtext&#x7C7B;&#x578B;&#x3002;</p>
+<h6 id="uuidfield">UUIDField</h6>
+<p>&#x53EA;&#x80FD;&#x5B58;&#x50A8;uuid&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;uuid&#x662F;&#x4E00;&#x4E2A;32&#x4F4D;&#x7684;&#x5168;&#x7403;&#x552F;&#x4E00;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x4F5C;&#x4E3A;&#x4E3B;&#x952E;&#x3002;</p>
+<h6 id="urlfield">URLField</h6>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;<code>CharField</code>&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x80FD;&#x7528;&#x6765;&#x5B58;&#x50A8;<code>url</code>&#x683C;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x4E14;&#x9ED8;&#x8BA4;&#x7684;<code>max_length</code>&#x662F;200.</p>
+<hr>
+<p>&#x5982;&#x679C;&#x60F3;&#x67E5;&#x770B;&#x66F4;&#x591A;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x9009;&#x62E9;&#x67D0;&#x4E2A;&#x5B57;&#x6BB5;<code>Ctrl+&#x5DE6;&#x5355;&#x51FB;</code>&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF01;</p>
+<h4 id="field&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#xFF1A;">Field&#x7684;&#x5E38;&#x7528;&#x53C2;&#x6570;&#xFF1A;</h4>
+<h5 id="null----------------null--true">null:                null = True</h5>
+<p>&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;<code>True</code>&#xFF0C;<code>Django</code>&#x5C06;&#x4F1A;&#x5728;&#x6620;&#x5C04;&#x8868;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x3002;&#x9ED8;&#x8BA4;&#x662F;&#x4E3A;<code>Flase</code>&#x3002;&#x5728;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x5173;&#x7684;Field&#xFF08;CharField/TextField)&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4FDD;&#x6301;&#x9ED8;&#x8BA4;&#x503C;<code>Flase</code>.&#x56E0;&#x4E3A;<code>Django</code>&#x5728;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x5173;&#x7684;Field&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53CA;&#x65F6;&#x8FD9;&#x4E2A;Field&#x7684;null=False&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x7ED9;&#x8FD9;&#x4E2A;Field&#x4F20;&#x9012;&#x4EFB;&#x4F55;&#x503C;&#xFF0C;&#x90A3;&#x4E48;<code>Django</code>&#x4E5F;&#x4F1A;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&apos;&apos;&#x6765;&#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#x5B58;&#x50A8;&#x8FDB;&#x53BB;&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x518D;&#x4F7F;&#x7528;null=True,Django&#x4F1A;&#x4EA7;&#x751F;&#x4E24;&#x79CD;&#x7A7A;&#x503C;&#x5F97;&#x60C5;&#x5F62;&#xFF08;NULL&#x6216;&#x8005;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5728;&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x7684;&#x65F6;&#x5019;&#x5141;&#x8BB8;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x7A7A;&#xFF0C;&#x90A3;&#x4E48;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;<code>blank=True</code>&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;<code>Field</code>&#x662F;BooleanField&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x5E94;&#x7684;&#x53EF;&#x7A7A;&#x7684;&#x5B57;&#x6BB5;&#x5219;&#x4E3A;<code>NullBooleanField</code>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment">#models.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Author</span><span class="hljs-params">(models.Model)</span>:</span>
+    username = models.CharField(max_length=<span class="hljs-number">100</span>)<span class="hljs-comment">#&#x9ED8;&#x8BA4;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;</span>
+    age = models.IntegerField(null = <span class="hljs-keyword">True</span>)
+<span class="hljs-comment">#views.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">null_text_field</span><span class="hljs-params">(request)</span>:</span>
+    author = Author(username=<span class="hljs-string">&apos;&apos;</span>)
+    author.save()
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;null&apos;</span>)
+</code></pre>
+<p><img src="images/1589120505066.png" alt="1589120505066"></p>
+<h4 id="blank">blank</h4>
+<p>&#x6807;&#x8BC6;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x5728;&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x7684;&#x65F6;&#x5019;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4E3A;&#x7A7A;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;False&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x548C;<code>null</code>&#x662F;&#x6709;&#x533A;&#x522B;&#x7684;&#xFF0C;<code>null</code>&#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x6570;&#x636E;&#x5E93;&#x7EA7;&#x522B;&#x7684;&#xFF0C;&#x800C;<code>blank</code>&#x662F;&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x7EA7;&#x522B;&#x7684;&#x3002;</p>
+<h4 id="dbcolumn">db_column:</h4>
+<p>&#x8FD9;&#x4E2A;&#x6B4C;&#x5B57;&#x6BB5;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x6A21;&#x578B;&#x4E2D;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
+<pre><code class="lang-python">age = models.IntegerField(null = <span class="hljs-keyword">True</span>,db_column=<span class="hljs-string">&apos;author_age&apos;</span>)
+<span class="hljs-comment">#db_column=&apos;author_age&apos;&#x52A0;&#x5165;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x4F1A;&#x5C06;&#x6570;&#x636E;&#x8868;&#x4E2D;&#x7684;age&#x6539;&#x53D8;&#x4E3A;author_age</span>
+</code></pre>
+<h4 id="default&#xFF1A;">default&#xFF1A;</h4>
+<p>&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x652F;&#x6301;<code>lambda</code>&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x652F;&#x6301;&#x5217;&#x8868;/&#x5B57;&#x5178;/&#x96C6;&#x5408;&#x7B49;&#x53EF;&#x53D8;&#x5F97;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<pre><code class="lang-python">age = models.IntegerField(null = <span class="hljs-keyword">True</span>,db_column=<span class="hljs-string">&apos;author_age&apos;</span>,default =<span class="hljs-number">0</span>)
+<span class="hljs-comment">#default =0,&#x5B57;&#x6BB5;&#x9ED8;&#x8BA4;&#x4E3A;0 &#x5982;&#x679C;&#x4E0D;&#x7ED9;&#x503C;&#x5F97;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x9ED8;&#x8BA4;&#x4E3A;0</span>
+now()
+&#x8C03;&#x7528;default = now  &#x540E;&#x9762;&#x4E0D;&#x9700;&#x8981;&#x62EC;&#x53F7;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x662F;&#x8C03;&#x7528;&#x51FD;&#x6570;
+</code></pre>
+<h4 id="autonowadd">auto_now_add</h4>
+<p>auto_now_add= ture &#x81EA;&#x52A8;&#x52A0;&#x5165;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x95F4;</p>
+<h4 id="primarykey">primary_key</h4>
+<p>&#x662F;&#x5426;&#x4E3A;&#x4E3B;&#x952E;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;False&#x3002;</p>
+<h4 id="unique">unique</h4>
+<p>&#x5728;&#x8868;&#x4E2D;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x662F;&#x5426;&#x552F;&#x4E00;&#x3002;&#x4E00;&#x822C;&#x662F;&#x8BBE;&#x7F6E;&#x624B;&#x673A;&#x53F7;&#x7801;/&#x90AE;&#x7BB1;&#x7B49;&#x3002;</p>
+<pre><code class="lang-python">telephone = models.CharField(max_length=<span class="hljs-number">11</span>,unique =<span class="hljs-keyword">True</span>,null=<span class="hljs-keyword">True</span>)
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x4E4B;&#x524D;&#x5B58;&#x5728;&#x6570;&#x636E;&#x552F;&#x4E00;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6DFB;&#x52A0;<code>null = True</code></p>
+<hr>
+<p>&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;</p>
+<p><a href="https://docs.djangoproject.com/zh-hans/2.0/ref/models/fields" target="_blank">https://docs.djangoproject.com/zh-hans/2.0/ref/models/fields</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="005ORM模型基本的增删改查操作.html" class="navigation navigation-prev " aria-label="Previous page: 005ORM模型基本的增删改查操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="007navie时间和aware时间详解.html" class="navigation navigation-next " aria-label="Next page: 007navie时间和aware时间详解">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"006ORM常用Filed详解","level":"1.4.4.6","depth":3,"next":{"title":"007navie时间和aware时间详解","level":"1.4.4.7","depth":3,"path":"django/django打造大型企业/第四章：数据库/007navie时间和aware时间详解.md","ref":"django/django打造大型企业/第四章：数据库/007navie时间和aware时间详解.md","articles":[]},"previous":{"title":"005ORM模型基本的增删改查操作","level":"1.4.4.5","depth":3,"path":"django/django打造大型企业/第四章：数据库/005ORM模型基本的增删改查操作.md","ref":"django/django打造大型企业/第四章：数据库/005ORM模型基本的增删改查操作.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","expandable-chapters","-lunr","-search","search-pro","livereload"],"pluginsConfig":{"back-to-top-button":{},"expandable-chapters":{},"search-pro":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"django/django打造大型企业/第四章：数据库/006ORM常用Filed详解.md","mtime":"2020-05-10T14:55:18.426Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-10T15:32:49.629Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

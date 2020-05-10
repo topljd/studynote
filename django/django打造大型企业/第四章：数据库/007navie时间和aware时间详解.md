@@ -31,7 +31,7 @@ utc_now = now.astimezone(utc_timezone)
 > #如果 USE_TZ 设置为false，那么django获取到当前时间就是一个naive类型的时间
 > #建议设置为True
 
-![image-20200406181440546](C:\Users\82023\AppData\Roaming\Typora\typora-user-images\image-20200406181440546.png)
+![1589120544893](images\1589120544893.png)
 
 ```python
 from django.shortcuts import render
