@@ -113,7 +113,7 @@ def null_text_field(request):
     return HttpResponse('null')
 ```
 
-![1589120505066](H:\studynote\django\django打造大型企业\第四章：数据库\images\1589120505066.png)
+![1589120505066](images\1589120505066.png)
 
 #### blank
 

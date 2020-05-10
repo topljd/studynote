@@ -2,7 +2,7 @@
 1、在官网下载mysql文件`https://dev.mysql.com/downloads/windows/installer/5.7.html`
 2、然后双击安装，如果出现一下错误，则到安装netdramework框架
 3、安装的时候回让你选择版本
-![1589120189210](H:\studynote\django\django打造大型企业\第四章：数据库\images\1589120189210.png)
+![1589120189210](images\1589120189210.png)
 
 4、上面直接全部安装的，安装完成之后会有一个`mysql5.7 command line client`终端直接打开
 

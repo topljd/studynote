@@ -85,7 +85,7 @@ def index(request):
 
 可以查看官方的文档
 
-![1589120279264](H:\studynote\django\django打造大型企业\第四章：数据库\images\1589120279264.png)
+![1589122422814](images/1589122422814.png)
 
 
 
