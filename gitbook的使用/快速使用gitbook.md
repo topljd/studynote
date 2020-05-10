@@ -18,7 +18,44 @@
 
 将会看到版本号！
 
+`切换npm源的方法`
+$ npm install -g nrm 安装
+
+输入`nrm ls`列出安装源地址
+```python
+*  npm ---- https://registry.npmjs.org
+
+    cnpm --- http://r.cnpmjs.org/
+
+    taobao -http://registry.npm.taobao.org/
+
+    eu ----- http://registry.npmjs.eu/
+
+    au -----  http://registry.npmjs.org.au/
+
+    sl ----- http://npm.strongloop.com/
+
+    nj -----  https://registry.nodejitsu.com/
+
+带*的是当前使用的源，上面的输出表明当前源是官方源。
+ $ nrm use taobao
+        Registry has beensetto: http://registry.npm.taobao.org/
+        使用淘宝安装源
+```
+nrm最常用的命令
+```auto
+1.nrm ls 查看已有的源 
+
+2.nrm add <源名称> <源地址> 新增源 
+
+3.nrm use <源名称>切换到现有的源
+
+4.nrm test  测速
+```
+
 4、安装GItBook，命令行输入下述命令
+
+管理员身份运行`CMD`
 
 ```shell
 npm install gitbook-cli -g
