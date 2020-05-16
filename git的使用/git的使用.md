@@ -326,4 +326,23 @@ Everything up-to-date
 解决方案：远程仓库与本地仓库代码不一样，上传不了！（远程仓库有其他的文件)
 
 方法：1、`git pull origin master`将远程文件拉取到本地。再次执行`git add .`等系列动作上传。此时一切正常！
+> 12、上传时出现fatal: 拒绝合并无关的历史
+```shell
+本地初始化的项目 与 github 版本不一致, 导致无法提交
+ 
+$ git pull origin master
+ * branch            master     -> FETCH_HEAD
+fatal: 拒绝合并无关的历史
+解决方法
+ 
+在pull 时候, 添加–allow-unrelated-histories参数 即可.
+ 
+$ git pull origin master --allow-unrelated-histories                   
+来自 https://github.com/itaken/python-login-demo
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ LICENSE | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+ create mode 100644 LICENSE
+```
 
