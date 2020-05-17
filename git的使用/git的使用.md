@@ -346,3 +346,6 @@ Merge made by the 'recursive' strategy.
  create mode 100644 LICENSE
 ```
 
+> 苹果电脑，上传到github的时候，会发现很多._的文件？
+
+答：其实这些是因为磁盘的格式不是afhs格式自动生成的隐藏文件。
