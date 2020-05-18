@@ -349,3 +349,9 @@ Merge made by the 'recursive' strategy.
 > 苹果电脑，上传到github的时候，会发现很多._的文件？
 
 答：其实这些是因为磁盘的格式不是afhs格式自动生成的隐藏文件。
+
+> 对于clone的仓库
+
+1、执行 git clone 地址
+
+2、正常git add . 就可以了
