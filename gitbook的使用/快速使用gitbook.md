@@ -73,7 +73,9 @@ sudo npm install gitbook-cli -g
 gitbook -V(注意这里的v是大写)
 ```
 
+此时安装CLI版本，安装完的样子为：
 
+![image-20200518084049569](images/image-20200518084049569.png)
 
 ## GitBook创建以及预览使用
 

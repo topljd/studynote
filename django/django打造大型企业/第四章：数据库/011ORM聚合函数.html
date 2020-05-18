@@ -1,0 +1,1143 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>011ORM聚合函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="012F表达式和Q表达式.html" />
+    
+    
+    <link rel="prev" href="010ORM查询条件.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    笔记文档介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../git的使用/git的使用.html">
+            
+                <a href="../../../git的使用/git的使用.html">
+            
+                    
+                    git的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../gitbook的使用/快速使用gitbook.html">
+            
+                <a href="../../../gitbook的使用/快速使用gitbook.html">
+            
+                    
+                    gitbook的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    常用软件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../software cracking tutorial/pycharm.html">
+            
+                <a href="../../../software cracking tutorial/pycharm.html">
+            
+                    
+                    pycharm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                <a href="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                    
+                    sublime_version3_cracking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    django打造大型企业
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    第一章：学前准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                <a href="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                    
+                    第一节：虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../第一章：学前准备/第二节：准备工作.html">
+            
+                <a href="../第一章：学前准备/第二节：准备工作.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../第一章：学前准备/第三节：Django介绍.html">
+            
+                <a href="../第一章：学前准备/第三节：Django介绍.html">
+            
+                    
+                    第三节：Django介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                <a href="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                    
+                    第四节：URL组成部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    第二章：URL与视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                <a href="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                    
+                    第一节：第一个Django项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                <a href="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    第三章：模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../第三章：模板/第一节：模板介绍.html">
+            
+                <a href="../第三章：模板/第一节：模板介绍.html">
+            
+                    
+                    第一节：模板介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../第三章：模板/第二节：模板变量.html">
+            
+                <a href="../第三章：模板/第二节：模板变量.html">
+            
+                    
+                    第二节：模板变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../第三章：模板/第三节：常用标签.html">
+            
+                <a href="../第三章：模板/第三节：常用标签.html">
+            
+                    
+                    第三节：常用标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../第三章：模板/第四节：常用过滤器.html">
+            
+                <a href="../第三章：模板/第四节：常用过滤器.html">
+            
+                    
+                    第四节：常用过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../第三章：模板/第五节：自定义过滤.html">
+            
+                <a href="../第三章：模板/第五节：自定义过滤.html">
+            
+                    
+                    第五节：自定义过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../第三章：模板/第六节：模板结构优化.html">
+            
+                <a href="../第三章：模板/第六节：模板结构优化.html">
+            
+                    
+                    第六节：模板结构优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../第三章：模板/第七节：加载静态文件.html">
+            
+                <a href="../第三章：模板/第七节：加载静态文件.html">
+            
+                    
+                    第七节：加载静态文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    第四章：数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="001django mysql安装及其一些软件.html">
+            
+                <a href="001django mysql安装及其一些软件.html">
+            
+                    
+                    001django mysql安装及其一些软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="002django使用原生sql语句操作数据库.html">
+            
+                <a href="002django使用原生sql语句操作数据库.html">
+            
+                    
+                    002django使用原生sql语句操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="003mysql图书管理系统.html">
+            
+                <a href="003mysql图书管理系统.html">
+            
+                    
+                    003mysql图书管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="004ORM模型.html">
+            
+                <a href="004ORM模型.html">
+            
+                    
+                    004ORM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="005ORM模型基本的增删改查操作.html">
+            
+                <a href="005ORM模型基本的增删改查操作.html">
+            
+                    
+                    005ORM模型基本的增删改查操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.6" data-path="006ORM常用Filed详解.html">
+            
+                <a href="006ORM常用Filed详解.html">
+            
+                    
+                    006ORM常用Filed详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.7" data-path="007navie时间和aware时间详解.html">
+            
+                <a href="007navie时间和aware时间详解.html">
+            
+                    
+                    007navie时间和aware时间详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.8" data-path="008meta类中常见配置.html">
+            
+                <a href="008meta类中常见配置.html">
+            
+                    
+                    008meta类中常见配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.9" data-path="009外链和表关系.html">
+            
+                <a href="009外链和表关系.html">
+            
+                    
+                    009外链和表关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.10" data-path="010ORM查询条件.html">
+            
+                <a href="010ORM查询条件.html">
+            
+                    
+                    010ORM查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4.11" data-path="011ORM聚合函数.html">
+            
+                <a href="011ORM聚合函数.html">
+            
+                    
+                    011ORM聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.12" data-path="012F表达式和Q表达式.html">
+            
+                <a href="012F表达式和Q表达式.html">
+            
+                    
+                    012F表达式和Q表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.13" data-path="013Query Set API.html">
+            
+                <a href="013Query Set API.html">
+            
+                    
+                    013Query_Set_API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.14" data-path="014ORM作业.html">
+            
+                <a href="014ORM作业.html">
+            
+                    
+                    014ORM作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.15" data-path="015ORM模型迁移.html">
+            
+                <a href="015ORM模型迁移.html">
+            
+                    
+                    015ORM模型迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    第五章：高级视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                <a href="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                    
+                    5.1 第一节：限制请求method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                <a href="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                    
+                    5.2 第二节：页面重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                <a href="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                    
+                    5.3 第三节：HttpRequst对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                <a href="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                    
+                    5.4 第四节：HttpResponse对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.5" data-path="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                <a href="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                    
+                    5.5 第五节：生成csv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.6" data-path="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                <a href="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                    
+                    5.6 第六节：类视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.7" data-path="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                <a href="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                    
+                    5.7 第七节：错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    第六章：表单
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" >
+            
+                <span>
+            
+                    
+                    6.1 第一节：表单概述
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../php/README.md">
+            
+                <span>
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >011ORM聚合函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x805A;&#x5408;&#x51FD;&#x6570;">&#x805A;&#x5408;&#x51FD;&#x6570;</h3>
+<blockquote>
+<p>&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;</p>
+<p>&#x521B;&#x5EFA;APP</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x4F60;&#x7528;&#x539F;&#x751F;<code>SQL</code>&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x805A;&#x5408;&#x51FD;&#x6570;&#x6765;&#x63D0;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x63D0;&#x53D6;&#x67D0;&#x4E2A;&#x5546;&#x54C1;&#x9500;&#x552E;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Count</code>&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x77E5;&#x9053;&#x5546;&#x54C1;&#x7684;&#x9500;&#x552E;&#x7684;&#x5E73;&#x5747;&#x4EF7;&#x683C;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>Avg</code>.</p>
+<p>&#x805A;&#x5408;&#x51FD;&#x6570;&#x662F;&#x901A;&#x8FC7;<code>aggregate</code>&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x5728;&#x8BB2;&#x89E3;&#x8FD9;&#x4E9B;&#x805A;&#x5408;&#x51FD;&#x6570;&#x7528;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x4EE5;&#x4E0B;&#x7684;&#x6A21;&#x578B;&#x5BF9;&#x8C61;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment">#models.py</span>
+<span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Author</span><span class="hljs-params">(models.Model)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;&#x4F5C;&#x8005;&#x6A21;&#x578B;&apos;&apos;&apos;</span>
+    name = models.CharField(max_length=<span class="hljs-number">100</span>)
+    age = models.IntegerField()
+    email = models.EmailField()
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        db_table = <span class="hljs-string">&apos;author&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Publisher</span><span class="hljs-params">(models.Model)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;&#x51FA;&#x7248;&#x793E;&#x6A21;&#x578B;&apos;&apos;&apos;</span>
+    name = models.CharField(max_length=<span class="hljs-number">300</span>)
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        db_table = <span class="hljs-string">&apos;publisher&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Book</span><span class="hljs-params">(models.Model)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;&#x56FE;&#x4E66;&#x6A21;&#x578B;&apos;&apos;&apos;</span>
+    name = models.CharField(max_length=<span class="hljs-number">300</span>)
+    pages = models.IntegerField()
+    price = models.FloatField()
+    rating = models.FloatField()
+    author = models.ForeignKey(Author,on_delete=models.CASCADE)
+    publisher = models.ForeignKey(Publisher,on_delete=models.CASCADE)
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        db_table = <span class="hljs-string">&apos;book&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BookOrder</span><span class="hljs-params">(models.Model)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;&#x56FE;&#x4E66;&#x8BA2;&#x5355;&#x6A21;&#x578B;&apos;&apos;&apos;</span>
+    book = models.ForeignKey(<span class="hljs-string">&quot;Book&quot;</span>,on_delete=models.CASCADE)
+    price = models.FloatField()
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        db_table = <span class="hljs-string">&apos;book_order&apos;</span>
+</code></pre>
+<p>1&#x3001;<code>Avg</code>&#xFF1A;&#x6C42;&#x5E73;&#x5747;&#x503C;&#x3002;&#x6BD4;&#x5982;&#x60F3;&#x8981;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x56FE;&#x4E66;&#x7684;&#x4EF7;&#x683C;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.db.models <span class="hljs-keyword">import</span> Avg
+result = Book.objects.aggregate(Avg(<span class="hljs-string">&apos;price&apos;</span>))
+print(result)
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x7684;&#x6253;&#x5370;&#x7ED3;&#x679C;&#x662F;&#xFF1A;</p>
+<pre><code>{&quot;price__avg&quot;:23}
+</code></pre><hr>
+<p>1&#x3001;&#x6240;&#x6709;&#x7684;&#x805A;&#x5408;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x653E;&#x5728;&apos;django.db,models&apos;&#x4E0B;&#x9762;&#x3002;</p>
+<p>2&#x3001;&#x805A;&#x5408;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x591F;&#x5355;&#x72EC;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x9700;&#x8981;&#x653E;&#x5728;&#x4E00;&#x4E9B;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x805A;&#x5408;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#x4E0B;&#x9762;&#x53BB;&#x6267;&#x884C;&#x3002;&#x6BD4;&#x5982;<code>aggregate</code>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-comment">#&#x83B7;&#x53D6;&#x6240;&#x6709;&#x56FE;&#x4E66;&#x5B9A;&#x4EF7;&#x7684;&#x5E73;&#x5747;&#x4EF7;&#x683C;</span>
+    <span class="hljs-comment">#result = Book.objects.aggregate(Avg(&quot;price&quot;))</span>
+    result = Book.objects.aggregate(price_avg = Avg(<span class="hljs-string">&quot;price&quot;</span>))
+    <span class="hljs-comment">#price_avg &#x4EA4;&#x505A;&#x5B83;&#x7684;&#x522B;&#x540D;</span>
+
+    print(result)<span class="hljs-comment">#result &#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x7C7B;&#x578B;</span>
+    <span class="hljs-comment">#{&apos;price_avg&apos;: 97.25}</span>
+    <span class="hljs-comment">#&#x5B57;&#x5178;&#x8C03;&#x7528;&#x65B9;&#x6CD5; &#x5982;&#x4E0B;&#xFF1A;</span>
+    print(result[<span class="hljs-string">&apos;price_avg&apos;</span>])
+    print(connection.queries)
+    <span class="hljs-comment">#[{&apos;sql&apos;: &apos;SELECT @@SQL_AUTO_IS_NULL&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SELECT AVG(`book`.`price`) AS `price__avg` FROM `book`&apos;, &apos;time&apos;: &apos;0.000&apos;}]</span>
+    <span class="hljs-comment">#django&#x5728;&#x6267;&#x884C;sql&#x8BED;&#x53E5;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x4E86;&#x5176;&#x4ED6;&#x7684;&#x8BED;&#x53E5;</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;success&apos;</span>)
+</code></pre>
+<p>3&#x3001;&#x805A;&#x5408;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x7ED9;&#x8FD9;&#x4E2A;&#x805A;&#x5408;&#x51FD;&#x6570;&#x7684;&#x503C;&#x4E2A;&#x540D;&#x5B57;&#xFF0C;&#x53D6;&#x540D;&#x5B57;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>filed+__+&#x805A;&#x5408;&#x51FD;&#x6570;&#x540D;&#x5B57;</code>&#x5F62;&#x6210;&#x7684;&#x3002;&#x6BD4;&#x5982;&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x5F62;&#x6210;&#x7684;&#x540D;&#x5B57;&#x53EB;&#x505A;<code>price_avg</code>&#x3002;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x805A;&#x5408;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x4F20;&#x9012;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x8FDB;&#x53BB;&#xFF0C;&#x53C2;&#x6570;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x662F;&#x805A;&#x5408;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x7684;&#x540D;&#x5B57;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">result = Book.objects.aggregate(price_avg = Avg(<span class="hljs-string">&quot;price&quot;</span>))
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4F20;&#x9012;&#x4E86;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;<code>price_avg = Avg(&apos;price&apos;)</code>&#xFF0C;&#x90A3;&#x4E48;&#x4EE5;&#x540E;<code>Avg</code>&#x805A;&#x5408;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x7684;&#x540D;&#x5B57;&#x5C31;&#x53EB;&#x505A;<code>Avg</code></p>
+<p>4&#x3001;<code>aggregate</code>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>QuerySet</code>&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<strong><em>&#x5B57;&#x5178;</em></strong>&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x5178;&#x4E2D;&#x7684;key&#x5C31;&#x662F;&#x805A;&#x5408;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x503C;&#x5C31;&#x662F;&#x805A;&#x5408;&#x51FD;&#x6570;&#x6267;&#x884C;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h4 id="aggregate&#x548C;annotate&#x7684;&#x533A;&#x522B;&#xFF1A;">aggregate&#x548C;annotate&#x7684;&#x533A;&#x522B;&#xFF1A;</h4>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index2</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-comment">#&#x6211;&#x8981;&#x83B7;&#x53D6;&#x6BCF;&#x4E00;&#x672C;&#x56FE;&#x4E66;&#x9500;&#x552E;&#x7684;&#x5E73;&#x5747;&#x4EF7;&#x683C;</span>
+
+    <span class="hljs-comment">#result = Book.objects.aggregate(avg=Avg(&apos;bookorder__price&apos;))</span>
+    <span class="hljs-comment">#print(result)#{&apos;avg&apos;: 91.0}</span>
+    <span class="hljs-comment">#print(connection.queries)</span>
+    <span class="hljs-comment">#[{&apos;sql&apos;: &apos;SELECT @@SQL_AUTO_IS_NULL&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SELECT AVG(`book_order`.`price`) AS `avg` FROM `book` LEFT OUTER JOIN `book_order` ON (`book`.`id` = `book_order`.`book_id`)&apos;, &apos;time&apos;: &apos;0.000&apos;}]</span>
+
+    books = Book.objects.annotate(avg=Avg(<span class="hljs-string">&apos;bookorder__price&apos;</span>))
+    print(books)
+    <span class="hljs-comment">#&lt;QuerySet [&lt;Book: Book object (1)&gt;, &lt;Book: Book object (2)&gt;, &lt;Book: Book object (3)&gt;, &lt;Book: Book object (4)&gt;]&gt;</span>
+    print(<span class="hljs-string">&apos;+&apos;</span>*<span class="hljs-number">40</span>)
+    <span class="hljs-keyword">for</span> book <span class="hljs-keyword">in</span> books:
+        print(<span class="hljs-string">&apos;%s/%s&apos;</span> % (book.name,book.avg))
+    <span class="hljs-string">&apos;&apos;&apos;
+    &#x4E09;&#x56FD;&#x6F14;&#x4E49;/89.33333333333333
+    &#x6C34;&#x6D52;&#x4F20;/93.5
+    &#x897F;&#x6E38;&#x8BB0;/None
+    &#x7EA2;&#x697C;&#x68A6;/None
+    &apos;&apos;&apos;</span>
+    print(connection.queries)
+<span class="hljs-comment">#{&apos;sql&apos;: &apos;SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id`, AVG(`book_order`.`price`) AS `avg` FROM `book` LEFT OUTER JOIN `book_order` ON (`book`.`id` = `book_order`.`book_id`) GROUP BY `book`.`id` ORDER BY NULL LIMIT 21&apos;</span>
+<span class="hljs-comment"># {&apos;sql&apos;: &apos;SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id`, AVG(`book_order`.`price`) AS `avg` FROM `book` LEFT OUTER JOIN `book_order` ON (`book`.`id` = `book_order`.`book_id`) GROUP BY `book`.`id` ORDER BY NULL&apos;</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;index2&apos;</span>)
+</code></pre>
+<p><code>aggregate</code>&#x548C;<code>annotate</code>&#x7684;&#x76F8;&#x540C;&#x548C;&#x4E0D;&#x540C;&#xFF1A;</p>
+<ul>
+<li><p>&#x76F8;&#x540C;&#xFF1A;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x805A;&#x5408;&#x51FD;&#x6570;&#x3002;</p>
+</li>
+<li><p>&#x4E0D;&#x540C;&#xFF1A;</p>
+<p><code>aggregate</code></p>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x5B57;&#x5178;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x8FD9;&#x4E2A;&#x805A;&#x5408;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x800C;<code>annotate</code>&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;<code>QuerySet</code></p>
+<p>&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5728;&#x67E5;&#x627E;&#x7684;&#x6A21;&#x578B;&#x4E0A;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x805A;&#x5408;&#x51FD;&#x6570;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<p><code>aggregate</code>&#x4E0D;&#x4F1A;&#x505A;&#x5206;&#x7EC4;&#xFF0C;&#x800C;<code>annotate</code>&#x4F1A;&#x4F7F;&#x7528;<code>group by</code>&#x5B50;&#x53E5;&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;&#x53EA;&#x6709;&#x8C03;&#x7528;&#x4E86;<code>group by</code>&#x5B50;&#x53E5;&#xFF0C;&#x624D;&#x80FD;&#x5BF9;&#x6BCF;&#x4E00;&#x6761;&#x6570;&#x636E;&#x6C42;&#x805A;&#x5408;&#x51FD;&#x6570;&#x7684;&#x503C;&#x3002;</p>
+<p><code>Count</code>&#xFF1A;&#x7528;&#x6765;&#x6C42;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x8981;&#x6C42;&#x6240;&#x6709;&#x56FE;&#x4E66;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment">#book&#x8868;&#x4E2D;&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x672C;&#x4E66;&#xFF0C;&#xFF08;book&#x8868;&#x4E2D;&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x4E66;&#xFF09;</span>
+result = Book.objects.aggregate(book_nums=Count(<span class="hljs-string">&apos;id&apos;</span>,distinct=<span class="hljs-keyword">True</span>))
+<span class="hljs-comment">#distinct=True &#x8868;&#x793A;&#x4E0D;&#x7EDF;&#x8BA1;&#x91CD;&#x590D;&#x7684;&#x503C;</span>
+print(result)
+<span class="hljs-comment">#{&apos;book_nums&apos;: 4}</span>
+print(connection.queries)
+<span class="hljs-comment">#[ {&apos;sql&apos;: &apos;SELECT COUNT(`book`.`id`) AS `book_nums` FROM `book`&apos;, &apos;time&apos;: &apos;0.031&apos;}]</span>
+
+result1 = Author.objects.aggregate(email_nums = Count(<span class="hljs-string">&apos;email&apos;</span>,distinct=<span class="hljs-keyword">True</span>))
+<span class="hljs-comment">#&apos;SELECT COUNT(DISTINCT `book`.`id`) AS `book_nums` FROM `book`&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SELECT COUNT(DISTINCT `author`.`email`) AS `email_nums` FROM `author`&apos;, &apos;time&apos;: &apos;0.000&apos;}</span>
+print(result1)
+print(connection.queries)
+</code></pre>
+<p>&#x5E76;&#x4E14;<code>Count</code>&#x53EF;&#x4EE5;&#x4F20;&#x9012;<code>distinct=True</code>&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x5254;&#x9664;&#x90A3;&#x4E9B;&#x91CD;&#x590D;&#x7684;&#x503C;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;&#x4E00;&#x4E2A;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x8981;&#x83B7;&#x53D6;&#x4F5C;&#x8005;&#x8868;&#x4E2D;&#xFF0C;&#x4E0D;&#x540C;&#x90AE;&#x7BB1;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>distinct=True</code>&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">result1 = Author.objects.aggregate(email_nums = Count(<span class="hljs-string">&apos;email&apos;</span>,distinct=<span class="hljs-keyword">True</span>))
+<span class="hljs-comment">#&apos;SELECT COUNT(DISTINCT `book`.`id`) AS `book_nums` FROM `book`&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SELECT COUNT(DISTINCT `author`.`email`) AS `email_nums` FROM `author`&apos;, &apos;time&apos;: &apos;0.00&apos;}</span>
+</code></pre>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-comment">#===annotate &#x5148;&#x5206;&#x7EC4;</span>
+<span class="hljs-comment">#&#x7EDF;&#x8BA1;&#x6BCF;&#x672C;&#x4E66;&#x7684;&#x9500;&#x91CF;</span>
+books = Book.objects.annotate(book_nums=Count(<span class="hljs-string">&apos;bookorder&apos;</span>))<span class="hljs-comment">#&#x9ED8;&#x8BA4;bookorder__id</span>
+   <span class="hljs-keyword">for</span> book <span class="hljs-keyword">in</span> books:
+      print(<span class="hljs-string">&apos;%s/%s&apos;</span>% (book.name,book.book_nums))
+ <span class="hljs-string">&apos;&apos;&apos;
+  &#x4E09;&#x56FD;&#x6F14;&#x4E49;/3
+  &#x6C34;&#x6D52;&#x4F20;/2
+  &#x897F;&#x6E38;&#x8BB0;/0
+  &#x7EA2;&#x697C;&#x68A6;/0
+ &apos;&apos;&apos;</span>
+print(connection.queries)
+<span class="hljs-comment">#{&apos;sql&apos;: &apos;SELECT COUNT(DISTINCT `author`.`email`) AS `email_nums` FROM `author`&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id`, COUNT(`book_order`.`id`) AS `book_nums` FROM `book` LEFT OUTER JOIN `book_order` ON (`book`.`id` = `book_order`.`book_id`) GROUP BY `book`.`id` ORDER BY NULL&apos;}]</span>
+</code></pre>
+<p>3&#x3001;<code>Max</code>&#x548C;<code>Min</code>&#xFF1A;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#x3002;&#x6BD4;&#x5982;&#x60F3;&#x8981;&#x83B7;&#x53D6;<code>Author</code>&#x8868;&#x4E2D;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x5E74;&#x9F84;&#x548C;&#x6700;&#x5C0F;&#x7684;&#x5E74;&#x9F84;&#x5206;&#x522B;&#x662F;&#x591A;&#x5C11;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django db.models <span class="hljs-keyword">import</span> Max,Min
+result = Author.objects.aggregate(Max(<span class="hljs-string">&apos;age&apos;</span>),Min(<span class="hljs-string">&apos;age&apos;</span>))
+</code></pre>
+<p>&#x5982;&#x679C;&#x6700;&#x5927;&#x7684;&#x5E74;&#x9F84;&#x662F;88&#x6700;&#x5C0F;&#x7684;&#x5E74;&#x9F84;&#x662F;18&#xFF0C;&#x90A3;&#x4E48;&#x4EE5;&#x4E0A;&#x7684;result&#x5C06;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-python">{<span class="hljs-string">&apos;age__max&apos;</span>:<span class="hljs-number">88</span>,<span class="hljs-string">&apos;age__min&apos;</span>:<span class="hljs-number">18</span>}
+</code></pre>
+<pre><code class="lang-python">result = Author.objects.aggregate(max=Max(<span class="hljs-string">&apos;age&apos;</span>),min = Min(<span class="hljs-string">&apos;age&apos;</span>))
+    print(result)
+<span class="hljs-comment">#{&apos;max&apos;: 46, &apos;min&apos;: 28}</span>
+    print(connection.queries)
+<span class="hljs-comment">#&apos;sql&apos;: &apos;SELECT MAX(`author`.`age`) AS `max`, MIN(`author`.`age`) AS `min` FROM `author`</span>
+
+    <span class="hljs-comment">#&#x83B7;&#x53D6;&#x6BCF;&#x4E00;&#x672C;&#x56FE;&#x4E66;&#x552E;&#x5356;&#x7684;&#x65F6;&#x5019;&#x6700;&#x5927;&#x7684;&#x4EF7;&#x683C;&#x548C;&#x6700;&#x5C0F;&#x7684;&#x4EF7;&#x683C;</span>
+    books = Book.objects.annotate(max=Max(<span class="hljs-string">&apos;bookorder__price&apos;</span>),min =Min(<span class="hljs-string">&apos;bookorder__price&apos;</span>))
+    <span class="hljs-keyword">for</span> book <span class="hljs-keyword">in</span> books:
+        print(<span class="hljs-string">&apos;%s/%s/%s&apos;</span>%(book.name,book.max,book.min))
+    <span class="hljs-string">&apos;&apos;&apos;
+    &#x4E09;&#x56FD;&#x6F14;&#x4E49;/95.0/85.0
+    &#x6C34;&#x6D52;&#x4F20;/94.0/93.0
+    &#x897F;&#x6E38;&#x8BB0;/None/None
+    &#x7EA2;&#x697C;&#x68A6;/None/None
+    &apos;&apos;&apos;</span>
+    print(connection.queries)
+    <span class="hljs-comment">#&apos;SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id`, MAX(`book_order`.`price`) AS `max`, MIN(`book_order`.`price`) AS `min` FROM `book` LEFT OUTER JOIN `book_order` ON (`book`.`id` = `book_order`.`book_id`) GROUP BY `book`.`id` ORDER BY NULL&apos;</span>
+</code></pre>
+<p>4&#x3001;<code>Sum</code>&#xFF1A;&#x6C42;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x7684;&#x603B;&#x548C;&#x3002;&#x6BD4;&#x5982;&#x8981;&#x6C42;&#x56FE;&#x4E66;&#x7684;&#x9500;&#x552E;&#x603B;&#x989D;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;``</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django db.models <span class="hljs-keyword">import</span> Sum
+result = Book.objects.annotate(total=Sum(<span class="hljs-string">&quot;bookstore__price&quot;</span>)).values(<span class="hljs-string">&apos;name&apos;</span>,<span class="hljs-string">&apos;total&apos;</span>)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index5</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-comment">#1.&#x6C42;&#x6240;&#x6709;&#x56FE;&#x4E66;&#x7684;&#x9500;&#x552E;&#x603B;&#x989D;</span>
+    result = BookOrder.objects.aggregate(total=Sum(<span class="hljs-string">&apos;price&apos;</span>))
+    print(result)
+    <span class="hljs-comment">#{&apos;total&apos;: 455.0}</span>
+    print(connection.queries)
+    <span class="hljs-comment">#&apos;SELECT SUM(`book_order`.`price`) AS `total` FROM `book_order`&apos;</span>
+
+
+    <span class="hljs-comment">#&#x6C42;&#x6BCF;&#x4E00;&#x672C;&#x4E66;&#x7684;&#x9500;&#x552E;&#x603B;&#x989D;</span>
+    books = Book.objects.annotate(total=Sum(<span class="hljs-string">&quot;bookorder__price&quot;</span>))
+    <span class="hljs-keyword">for</span> book <span class="hljs-keyword">in</span> books:
+        print(<span class="hljs-string">&quot;%s/%s&quot;</span>%(book.name,book.total))
+    <span class="hljs-string">&apos;&apos;&apos;
+    &#x4E09;&#x56FD;&#x6F14;&#x4E49;/268.0
+    &#x6C34;&#x6D52;&#x4F20;/187.0
+    &#x897F;&#x6E38;&#x8BB0;/None
+    &#x7EA2;&#x697C;&#x68A6;/None
+    &apos;&apos;&apos;</span>
+    print(connection.queries)
+    <span class="hljs-comment">#&apos;sql&apos;: &apos;SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED&apos;, &apos;time&apos;: &apos;0.000&apos;}, {&apos;sql&apos;: &apos;SELECT SUM(`book_order`.`price`) AS `total` FROM `book_order`&apos;, &apos;time&apos;: &apos;0.016&apos;}, {&apos;sql&apos;: &apos;SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id`, SUM(`book_order`.`price`) AS `total` FROM `book` LEFT OUTER JOIN `book_order` ON (`book`.`id` = `book_order`.`book_id`) GROUP BY `book`.`id` ORDER BY NULL&apos;</span>
+
+    <span class="hljs-comment">#3&#x3001;&#x6C42;2020&#x5E74;&#x5EA6;&#x6BCF;&#x4E00;&#x672C;&#x56FE;&#x4E66;&#x9500;&#x552E;&#x603B;&#x989D;</span>
+    result = BookOrder.objects.filter(create_time__year=<span class="hljs-number">2020</span>).aggregate(total=Sum(<span class="hljs-string">&apos;price&apos;</span>))
+    print(result)
+    <span class="hljs-comment">#{&apos;total&apos;: 455.0}</span>
+    print(connection.queries)
+    <span class="hljs-comment">#&apos;sql&apos;: &apos;SELECT SUM(`book_order`.`price`) AS `total` FROM `book_order`&apos;</span>
+    <span class="hljs-comment">#&apos;sql&apos;: &quot;SELECT SUM(`book_order`.`price`) AS `total` FROM `book_order` WHERE `book_order`.`create_time` BETWEEN &apos;2020-01-01 00:00:00&apos; AND &apos;2020-12-31 23:59:59.999999&apos;&quot;</span>
+    <span class="hljs-comment">#&#x6C42;&#x6BCF;&#x4E00;&#x672C;&#x56FE;&#x4E66;&#x5728;2020&#x5E74;&#x5EA6;&#x9500;&#x552E;&#x603B;&#x989D;</span>
+    books = Book.objects.filter(bookorder__create_time__year=<span class="hljs-number">2020</span>).annotate(total=Sum(<span class="hljs-string">&quot;bookorder__price&quot;</span>))
+    <span class="hljs-keyword">for</span> book <span class="hljs-keyword">in</span> books:
+        print(<span class="hljs-string">&apos;%s/%s&apos;</span> % (book.name, book.total))
+    <span class="hljs-string">&apos;&apos;&apos;
+    &#x4E09;&#x56FD;&#x6F14;&#x4E49;/268.0
+    &#x6C34;&#x6D52;&#x4F20;/187.0
+    &apos;&apos;&apos;</span>
+    print(connection.queries)
+    <span class="hljs-comment">#&apos;sql&apos;: &quot;SELECT `book`.`id`, `book`.`name`, `book`.`pages`, `book`.`price`, `book`.`rating`, `book`.`author_id`, `book`.`publisher_id`, SUM(`book_order`.`price`) AS `total` FROM `book` INNER JOIN `book_order` ON (`book`.`id` = `book_order`.`book_id`) WHERE `book_order`.`create_time` BETWEEN &apos;2020-01-01 00:00:00&apos; AND &apos;2020-12-31 23:59:59.999999&apos; GROUP BY `book`.`id` ORDER BY NULL&quot;</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;index5&apos;</span>)
+</code></pre>
+<p><code>aggregate</code>&#x548C;<code>annotate</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x7684;<code>QuerySet</code>&#x5BF9;&#x8C61;&#x4E0A;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x53EA;&#x8981;&#x8FD4;&#x56DE;&#x4E86;<code>QuerySet</code>&#x5151;&#x73B0;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#x8981;&#x83B7;&#x53D6;2020&#x5EA6;&#x9500;&#x552E;&#x603B;&#x989D;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x8FC7;&#x6EE4;&#x5E74;&#x4EFD;&#xFF0C;&#x518D;&#x6C42;&#x805A;&#x5408;&#x51FD;&#x6570;&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0A;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="010ORM查询条件.html" class="navigation navigation-prev " aria-label="Previous page: 010ORM查询条件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="012F表达式和Q表达式.html" class="navigation navigation-next " aria-label="Next page: 012F表达式和Q表达式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"011ORM聚合函数","level":"1.5.4.11","depth":3,"next":{"title":"012F表达式和Q表达式","level":"1.5.4.12","depth":3,"path":"django/django打造大型企业/第四章：数据库/012F表达式和Q表达式.md","ref":"django/django打造大型企业/第四章：数据库/012F表达式和Q表达式.md","articles":[]},"previous":{"title":"010ORM查询条件","level":"1.5.4.10","depth":3,"path":"django/django打造大型企业/第四章：数据库/010ORM查询条件.md","ref":"django/django打造大型企业/第四章：数据库/010ORM查询条件.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","expandable-chapters","-lunr","-search","search-pro","livereload"],"pluginsConfig":{"back-to-top-button":{},"expandable-chapters":{},"search-pro":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"django/django打造大型企业/第四章：数据库/011ORM聚合函数.md","mtime":"2020-05-18T00:17:24.321Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-18T00:43:15.081Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1194 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.3 第三节：HttpRequst对象 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5.4 第四节：HttpResponse对象.html" />
+    
+    
+    <link rel="prev" href="5.2 第二节：页面重定向.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    笔记文档介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../git的使用/git的使用.html">
+            
+                <a href="../../../git的使用/git的使用.html">
+            
+                    
+                    git的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../gitbook的使用/快速使用gitbook.html">
+            
+                <a href="../../../gitbook的使用/快速使用gitbook.html">
+            
+                    
+                    gitbook的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    常用软件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../software cracking tutorial/pycharm.html">
+            
+                <a href="../../../software cracking tutorial/pycharm.html">
+            
+                    
+                    pycharm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                <a href="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                    
+                    sublime_version3_cracking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    django打造大型企业
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    第一章：学前准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                <a href="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                    
+                    第一节：虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../第一章：学前准备/第二节：准备工作.html">
+            
+                <a href="../第一章：学前准备/第二节：准备工作.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../第一章：学前准备/第三节：Django介绍.html">
+            
+                <a href="../第一章：学前准备/第三节：Django介绍.html">
+            
+                    
+                    第三节：Django介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                <a href="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                    
+                    第四节：URL组成部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    第二章：URL与视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                <a href="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                    
+                    第一节：第一个Django项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                <a href="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    第三章：模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../第三章：模板/第一节：模板介绍.html">
+            
+                <a href="../第三章：模板/第一节：模板介绍.html">
+            
+                    
+                    第一节：模板介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../第三章：模板/第二节：模板变量.html">
+            
+                <a href="../第三章：模板/第二节：模板变量.html">
+            
+                    
+                    第二节：模板变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../第三章：模板/第三节：常用标签.html">
+            
+                <a href="../第三章：模板/第三节：常用标签.html">
+            
+                    
+                    第三节：常用标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../第三章：模板/第四节：常用过滤器.html">
+            
+                <a href="../第三章：模板/第四节：常用过滤器.html">
+            
+                    
+                    第四节：常用过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../第三章：模板/第五节：自定义过滤.html">
+            
+                <a href="../第三章：模板/第五节：自定义过滤.html">
+            
+                    
+                    第五节：自定义过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../第三章：模板/第六节：模板结构优化.html">
+            
+                <a href="../第三章：模板/第六节：模板结构优化.html">
+            
+                    
+                    第六节：模板结构优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../第三章：模板/第七节：加载静态文件.html">
+            
+                <a href="../第三章：模板/第七节：加载静态文件.html">
+            
+                    
+                    第七节：加载静态文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    第四章：数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                <a href="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                    
+                    001django mysql安装及其一些软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                <a href="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                    
+                    002django使用原生sql语句操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../第四章：数据库/003mysql图书管理系统.html">
+            
+                <a href="../第四章：数据库/003mysql图书管理系统.html">
+            
+                    
+                    003mysql图书管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../第四章：数据库/004ORM模型.html">
+            
+                <a href="../第四章：数据库/004ORM模型.html">
+            
+                    
+                    004ORM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                <a href="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                    
+                    005ORM模型基本的增删改查操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.6" data-path="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                <a href="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                    
+                    006ORM常用Filed详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.7" data-path="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                <a href="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                    
+                    007navie时间和aware时间详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.8" data-path="../第四章：数据库/008meta类中常见配置.html">
+            
+                <a href="../第四章：数据库/008meta类中常见配置.html">
+            
+                    
+                    008meta类中常见配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.9" data-path="../第四章：数据库/009外链和表关系.html">
+            
+                <a href="../第四章：数据库/009外链和表关系.html">
+            
+                    
+                    009外链和表关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.10" data-path="../第四章：数据库/010ORM查询条件.html">
+            
+                <a href="../第四章：数据库/010ORM查询条件.html">
+            
+                    
+                    010ORM查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.11" data-path="../第四章：数据库/011ORM聚合函数.html">
+            
+                <a href="../第四章：数据库/011ORM聚合函数.html">
+            
+                    
+                    011ORM聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.12" data-path="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                <a href="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                    
+                    012F表达式和Q表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.13" data-path="../第四章：数据库/013Query Set API.html">
+            
+                <a href="../第四章：数据库/013Query Set API.html">
+            
+                    
+                    013Query_Set_API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.14" data-path="../第四章：数据库/014ORM作业.html">
+            
+                <a href="../第四章：数据库/014ORM作业.html">
+            
+                    
+                    014ORM作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.15" data-path="../第四章：数据库/015ORM模型迁移.html">
+            
+                <a href="../第四章：数据库/015ORM模型迁移.html">
+            
+                    
+                    015ORM模型迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    第五章：高级视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="5.1 第一节：限制请求method.html">
+            
+                <a href="5.1 第一节：限制请求method.html">
+            
+                    
+                    5.1 第一节：限制请求method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="5.2 第二节：页面重定向.html">
+            
+                <a href="5.2 第二节：页面重定向.html">
+            
+                    
+                    5.2 第二节：页面重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5.3" data-path="5.3 第三节：HttpRequst对象.html">
+            
+                <a href="5.3 第三节：HttpRequst对象.html">
+            
+                    
+                    5.3 第三节：HttpRequst对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="5.4 第四节：HttpResponse对象.html">
+            
+                <a href="5.4 第四节：HttpResponse对象.html">
+            
+                    
+                    5.4 第四节：HttpResponse对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.5" data-path="5.5 第五节：生成csv文件.html">
+            
+                <a href="5.5 第五节：生成csv文件.html">
+            
+                    
+                    5.5 第五节：生成csv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.6" data-path="5.6 第六节：类视图.html">
+            
+                <a href="5.6 第六节：类视图.html">
+            
+                    
+                    5.6 第六节：类视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.7" data-path="5.7 第七节：错误处理.html">
+            
+                <a href="5.7 第七节：错误处理.html">
+            
+                    
+                    5.7 第七节：错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    第六章：表单
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" >
+            
+                <span>
+            
+                    
+                    6.1 第一节：表单概述
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../php/README.md">
+            
+                <span>
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >5.3 第三节：HttpRequst对象</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="wsgirequest&#x5BF9;&#x8C61;">WSGIRequest&#x5BF9;&#x8C61;</h1>
+<p>Django&#x5728;&#x63A5;&#x6536;&#x5230;http&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x6839;&#x636E;http&#x8BF7;&#x6C42;&#x643A;&#x5E26;&#x7684;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x62A5;&#x6587;&#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>WSGIRequest</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x4F5C;&#x4E3A;&#x89C6;&#x56FE;&#x51FD;&#x6570;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x7ED9;&#x89C6;&#x56FE;&#x51FD;&#x6570;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x770B;&#x5230;&#x7684;<code>request</code>&#x53C2;&#x6570;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x4E0A;&#x4F20;&#x4E0A;&#x6765;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x662F;<code>django.core.handlers.wsgi.WSGIRequest</code>&#x3002;</p>
+<h2 id="wsgirequest&#x5BF9;&#x8C61;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF1A;">WSGIRequest&#x5BF9;&#x8C61;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF1A;</h2>
+<h3 id="wsgirequest&#x5BF9;&#x8C61;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#xFF1A;">WSGIRequest&#x5BF9;&#x8C61;&#x5E38;&#x7528;&#x5C5E;&#x6027;&#xFF1A;</h3>
+<p><code>WSGIRequest</code>&#x5BF9;&#x8C61;&#x4E0A;&#x5927;&#x90E8;&#x5206;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x662F;&#x53EA;&#x8BFB;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x662F;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x4E0A;&#x4F20;&#x4E0A;&#x6765;&#x7684;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#x505A;&#x4EFB;&#x4F55;&#x7684;&#x4FEE;&#x6539;&#x3002;&#x4EE5;&#x4E0B;&#x5C06;&#x5BF9;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x8BB2;&#x89E3;&#xFF1A;</p>
+<ol>
+<li><p><code>path</code>&#xFF1A;&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5B8C;&#x6574;&#x201C;&#x8DEF;&#x5F84;&#x201D;&#xFF0C;&#x4F46;&#x4E0D;&#x5305;&#x542B;&#x57DF;&#x540D;&#x548C;&#x53C2;&#x6570;&#x3002;&#x6BD4;&#x5982;<code>http://www.baidu.com/xxx/yyy/</code>&#xFF0C;&#x90A3;&#x4E48;<code>path</code>&#x5C31;&#x662F;<code>/xxx/yyy/</code>&#x3002;</p>
+<pre><code class="lang-python">print(request.path)
+<span class="hljs-comment">#&#x8BBF;&#x95EE;http://127.0.0.1:8000/login/   &#x8FD4;&#x56DE;&#xFF1A;/login/</span>
+</code></pre>
+</li>
+<li><p><code>method</code>&#xFF1A;&#x4EE3;&#x8868;&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x7684;<code>http</code>&#x65B9;&#x6CD5;&#x3002;&#x6BD4;&#x5982;&#x662F;<code>GET</code>&#x8FD8;&#x662F;<code>POST</code>&#x3002;</p>
+<pre><code class="lang-python">print(request.method)<span class="hljs-comment">#GET</span>
+</code></pre>
+</li>
+<li><p><code>GET</code>&#xFF1A;&#x4E00;&#x4E2A;<code>django.http.request.QueryDict</code>&#x5BF9;&#x8C61;&#x3002;&#x64CD;&#x4F5C;&#x8D77;&#x6765;&#x7C7B;&#x4F3C;&#x4E8E;&#x5B57;&#x5178;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x4EE5;<code>?xxx=xxx</code>&#x7684;&#x65B9;&#x5F0F;&#x4E0A;&#x4F20;&#x4E0A;&#x6765;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-python">print(request.GET[<span class="hljs-string">&apos;username&apos;</span>])
+<span class="hljs-comment">#&#x8BBF;&#x95EE;http://127.0.0.1:8000/login/?username=topljd</span>
+<span class="hljs-comment">#topljd</span>
+</code></pre>
+</li>
+<li><p><code>POST</code>&#xFF1A;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;<code>django.http.request.QueryDict</code>&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x4EE5;<code>POST</code>&#x65B9;&#x5F0F;&#x4E0A;&#x4F20;&#x4E0A;&#x6765;&#x7684;&#x53C2;&#x6570;&#x3002;FoemData&#x4F20;&#x8F93;&#x6570;&#x636E;</p>
+</li>
+<li><p><code>FILES</code>&#xFF1A;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;<code>django.http.request.QueryDict</code>&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+</li>
+<li><p><code>COOKIES</code>&#xFF1A;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684;Python&#x5B57;&#x5178;&#xFF0C;&#x5305;&#x542B;&#x6240;&#x6709;&#x7684;<code>cookie</code>&#xFF0C;&#x952E;&#x503C;&#x5BF9;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p><code>session</code>&#xFF1A;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E;&#x5B57;&#x5178;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x7528;&#x6765;&#x64CD;&#x4F5C;&#x670D;&#x52A1;&#x5668;&#x7684;<code>session</code>&#x3002;</p>
+</li>
+<li><p><code>META</code>&#xFF1A;&#x5B58;&#x50A8;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E0A;&#x6765;&#x7684;&#x6240;&#x6709;<code>header</code>&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-python"> <span class="hljs-keyword">for</span> key,values <span class="hljs-keyword">in</span> request.META.items():
+        print(key,<span class="hljs-string">&apos;,&apos;</span>,values)
+    <span class="hljs-string">&apos;&apos;&apos;
+    ALLUSERSPROFILE , C:\ProgramData
+    APPDATA , C:\Users\Administrator\AppData\Roaming
+    COMMONPROGRAMFILES , C:\Program Files\Common Files
+    COMMONPROGRAMFILES(X86) , C:\Program Files (x86)\Common Files
+    COMMONPROGRAMW6432 , C:\Program Files\Common Files
+    COMPUTERNAME , DESKTOP-O619S1I
+    COMSPEC , C:\Windows\system32\cmd.exe
+    DJANGO_SETTINGS_MODULE , wsgirequest.settings
+    DRIVERDATA , C:\Windows\System32\Drivers\DriverData
+    FPS_BROWSER_APP_PROFILE_STRING , Internet Explorer
+    FPS_BROWSER_USER_PROFILE_STRING , Default
+    HOMEDRIVE , C:
+    HOMEPATH , \Users\Administrator
+    IDEA_INITIAL_DIRECTORY , d:\Program Files\JetBrains\PyCharm 2020.1\bin
+    LOCALAPPDATA , C:\Users\Administrator\AppData\Local
+    LOGONSERVER , \\DESKTOP-O619S1I
+    NUMBER_OF_PROCESSORS , 4
+    ONEDRIVE , C:\Users\Administrator\OneDrive
+    OS , Windows_NT
+    PATH , G:\ENV\django_env\Scripts;D:\Program Files\Python38\Scripts\;D:\Program Files\Python38\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;d:\Program Files\Git\cmd;D:\Program Files\nodejs\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm
+    PATHEXT , .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+    PROCESSOR_ARCHITECTURE , AMD64
+    PROCESSOR_IDENTIFIER , Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+    PROCESSOR_LEVEL , 6
+    PROCESSOR_REVISION , 2a07
+    PROGRAMDATA , C:\ProgramData
+    PROGRAMFILES , C:\Program Files
+    PROGRAMFILES(X86) , C:\Program Files (x86)
+    PROGRAMW6432 , C:\Program Files
+    PROMPT , (django_env) $P$G
+    PSMODULEPATH , C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+    PUBLIC , C:\Users\Public
+    PYCHARM_DISPLAY_PORT , 63342
+    PYCHARM_HOSTED , 1
+    PYTHONIOENCODING , UTF-8
+    PYTHONPATH , G:\django\wsgirequest;D:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm_matplotlib_backend;D:\Program Files\JetBrains\PyCharm 2020.1\plugins\python\helpers\pycharm_display
+    PYTHONUNBUFFERED , 1
+    SESSIONNAME , Console
+    SYSTEMDRIVE , C:
+    SYSTEMROOT , C:\Windows
+    TEMP , C:\Users\ADMINI~1\AppData\Local\Temp
+    TMP , C:\Users\ADMINI~1\AppData\Local\Temp
+    USERDOMAIN , DESKTOP-O619S1I
+    USERDOMAIN_ROAMINGPROFILE , DESKTOP-O619S1I
+    USERNAME , Administrator
+    USERPROFILE , C:\Users\Administrator
+    VIRTUAL_ENV , G:\ENV\django_env
+    WINDIR , C:\Windows
+    WORKON_HOME , G:\ENV
+    _OLD_VIRTUAL_PATH , D:\Program Files\Python38\Scripts\;D:\Program Files\Python38\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;d:\Program Files\Git\cmd;D:\Program Files\nodejs\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm
+    _OLD_VIRTUAL_PROMPT , $P$G
+    RUN_MAIN , true
+    SERVER_NAME , activate.navicat.com
+    GATEWAY_INTERFACE , CGI/1.1
+    SERVER_PORT , 8000
+    REMOTE_HOST , 
+    CONTENT_LENGTH , 
+    SCRIPT_NAME , 
+    SERVER_PROTOCOL , HTTP/1.1
+    SERVER_SOFTWARE , WSGIServer/0.2
+    REQUEST_METHOD , GET
+    PATH_INFO , /login/
+    QUERY_STRING , username=topljd
+    REMOTE_ADDR , 127.0.0.1
+    CONTENT_TYPE , text/plain
+    HTTP_HOST , 127.0.0.1:8000
+    HTTP_CONNECTION , keep-alive
+    HTTP_CACHE_CONTROL , max-age=0
+    HTTP_UPGRADE_INSECURE_REQUESTS , 1
+    HTTP_USER_AGENT , Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36
+    HTTP_ACCEPT , text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    HTTP_SEC_FETCH_SITE , none
+    HTTP_SEC_FETCH_MODE , navigate
+    HTTP_SEC_FETCH_USER , ?1
+    HTTP_SEC_FETCH_DEST , document
+    HTTP_ACCEPT_ENCODING , gzip, deflate, br
+    HTTP_ACCEPT_LANGUAGE , zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
+    wsgi.input , &lt;django.core.handlers.wsgi.LimitedStream object at 0x000002F0C1BAC9A0&gt;
+    wsgi.errors , &lt;_io.TextIOWrapper name=&apos;&lt;stderr&gt;&apos; mode=&apos;w&apos; encoding=&apos;utf-8&apos;&gt;
+    wsgi.version , (1, 0)
+    wsgi.run_once , False
+    wsgi.url_scheme , http
+    wsgi.multithread , True
+    wsgi.multiprocess , False
+    wsgi.file_wrapper , &lt;class &apos;wsgiref.util.FileWrapper&apos;&gt;
+    &apos;&apos;&apos;</span>
+</code></pre>
+</li>
+<li><p><code>CONTENT_LENGTH</code>&#xFF1A;&#x8BF7;&#x6C42;&#x7684;&#x6B63;&#x6587;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#x3002;</p>
+</li>
+<li><p><code>CONTENT_TYPE</code>&#xFF1A;&#x8BF7;&#x6C42;&#x7684;&#x6B63;&#x6587;&#x7684;MIME&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p><code>HTTP_ACCEPT</code>&#xFF1A;&#x54CD;&#x5E94;&#x53EF;&#x63A5;&#x6536;&#x7684;Content-Type&#x3002;</p>
+</li>
+<li><p><code>HTTP_ACCEPT_ENCODING</code>&#xFF1A;&#x54CD;&#x5E94;&#x53EF;&#x63A5;&#x6536;&#x7684;&#x7F16;&#x7801;&#x3002;</p>
+</li>
+<li><p><code>HTTP_ACCEPT_LANGUAGE</code>&#xFF1A; &#x54CD;&#x5E94;&#x53EF;&#x63A5;&#x6536;&#x7684;&#x8BED;&#x8A00;&#x3002;</p>
+</li>
+<li><p><code>HTTP_HOST</code>&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7684;HOST&#x503C;&#x3002;</p>
+</li>
+<li><p><code>HTTP_REFERER</code>&#xFF1A;&#x5728;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x4E0A;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684;url&#x3002;</p>
+</li>
+<li><p><code>QUERY_STRING</code>&#xFF1A;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7684;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x672A;&#x89E3;&#x6790;&#x8FC7;&#x7684;&#x5F62;&#x5F0F;&#xFF09;&#x3002;</p>
+</li>
+<li><p><code>REMOTE_ADDR</code>&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x7684;IP&#x5730;&#x5740;&#x3002;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x4F7F;&#x7528;&#x4E86;<code>nginx</code>&#x505A;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x6216;&#x8005;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x503C;&#x8FD4;&#x56DE;&#x7684;&#x662F;<code>127.0.0.1</code>&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>HTTP_X_FORWARDED_FOR</code>&#x6765;&#x83B7;&#x53D6;&#xFF0C;&#x6240;&#x4EE5;&#x83B7;&#x53D6;<code>ip</code>&#x5730;&#x5740;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">   <span class="hljs-keyword">if</span> request.META.has_key(<span class="hljs-string">&apos;HTTP_X_FORWARDED_FOR&apos;</span>):  
+       ip =  request.META[<span class="hljs-string">&apos;HTTP_X_FORWARDED_FOR&apos;</span>]  
+   <span class="hljs-keyword">else</span>:  
+       ip = request.META[<span class="hljs-string">&apos;REMOTE_ADDR&apos;</span>]
+</code></pre>
+</li>
+<li><p><code>REMOTE_HOST</code>&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x3002;</p>
+</li>
+<li><p><code>REQUEST_METHOD</code>&#xFF1A;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x3002;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x4F3C;&#x4E8E;<code>GET</code>&#x6216;&#x8005;<code>POST</code>&#x3002;</p>
+</li>
+<li><p><code>SERVER_NAME</code>&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x57DF;&#x540D;&#x3002;</p>
+</li>
+<li><p><code>SERVER_PORT</code>&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+</ol>
+<h3 id="wsgirequest&#x5BF9;&#x8C61;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;">WSGIRequest&#x5BF9;&#x8C61;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;</h3>
+<ol>
+<li><p><code>is_secure()</code>&#xFF1A;&#x662F;&#x5426;&#x662F;&#x91C7;&#x7528;<code>https</code>&#x534F;&#x8BAE;&#x3002;</p>
+<pre><code class="lang-python">print(request.is_secure())
+<span class="hljs-comment">#False</span>
+</code></pre>
+</li>
+<li><p><code>is_ajax()</code>&#xFF1A;&#x662F;&#x5426;&#x91C7;&#x7528;<code>ajax</code>&#x53D1;&#x9001;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x539F;&#x7406;&#x5C31;&#x662F;&#x5224;&#x65AD;&#x8BF7;&#x6C42;&#x5934;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;<code>X-Requested-With:XMLHttpRequest</code>&#x3002;</p>
+<pre><code class="lang-python">print(request.is_ajax())
+<span class="hljs-comment">#False</span>
+</code></pre>
+</li>
+<li><p><code>get_host()</code>&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7684;&#x57DF;&#x540D;&#x3002;&#x5982;&#x679C;&#x5728;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x6709;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x52A0;&#x4E0A;&#x7AEF;&#x53E3;&#x53F7;&#x3002;&#x6BD4;&#x5982;<code>www.baidu.com:9000</code>&#x3002;</p>
+<pre><code class="lang-python">print(request.get_host())
+<span class="hljs-comment">#127.0.0.1:8000</span>
+</code></pre>
+</li>
+<li><p><code>get_full_path()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x5B8C;&#x6574;&#x7684;path&#x3002;&#x5982;&#x679C;&#x6709;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD8;&#x4F1A;&#x52A0;&#x4E0A;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x6BD4;&#x5982;<code>/music/bands/?print=True</code>&#x3002;</p>
+<pre><code class="lang-python">print(request.get_full_path())
+<span class="hljs-comment">#&#x8BBF;&#x95EE;http://127.0.0.1:8000/login/?username=topljd</span>
+<span class="hljs-comment">#&#x8FD4;&#x56DE; /login/?username=topljd</span>
+</code></pre>
+</li>
+<li><p><code>get_raw_uri()</code>&#xFF1A;&#x83B7;&#x53D6;&#x8BF7;&#x6C42;&#x7684;&#x5B8C;&#x6574;<code>url</code>&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x8FD4;&#x56DE;&#x6574;&#x4E2A;URL&#x5730;&#x5740;</span>
+print(request.get_raw_uri())
+<span class="hljs-comment">#http://127.0.0.1:8000/login/?username=topljd</span>
+</code></pre>
+</li>
+</ol>
+<h2 id="querydict&#x5BF9;&#x8C61;&#xFF1A;">QueryDict&#x5BF9;&#x8C61;&#xFF1A;</h2>
+<p>&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x7528;&#x7684;<code>request.GET</code>&#x548C;<code>request.POST</code>&#x90FD;&#x662F;<code>QueryDict</code>&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7EE7;&#x627F;&#x81EA;<code>dict</code>&#xFF0C;&#x56E0;&#x6B64;&#x7528;&#x6CD5;&#x8DDF;<code>dict</code>&#x76F8;&#x5DEE;&#x65E0;&#x51E0;&#x3002;&#x5176;&#x4E2D;&#x7528;&#x5F97;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x662F;<code>get</code>&#x65B9;&#x6CD5;&#x548C;<code>getlist</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-python">print(type(request.GET))
+print(type(request.POST))
+<span class="hljs-string">&apos;&apos;&apos;
+&lt;class &apos;django.http.request.QueryDict&apos;&gt;
+&lt;class &apos;django.http.request.QueryDict&apos;&gt;
+&apos;&apos;&apos;</span>
+</code></pre>
+<ol>
+<li><code>get</code>&#x65B9;&#x6CD5;&#xFF1A;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x6307;&#x5B9A;<code>key</code>&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;<code>key</code>&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x8FD4;&#x56DE;<code>None</code>&#x3002;</li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-comment">#username = request.GET[&apos;username&apos;]</span>
+<span class="hljs-comment">#&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6CA1;&#x6709;&#x503C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;None</span>
+<span class="hljs-comment">#username = request.GET.get(&apos;uwername&apos;)</span>
+username =request.GET.get(<span class="hljs-string">&apos;username&apos;</span>,default=<span class="hljs-string">&apos;topljd&apos;</span>)
+<span class="hljs-comment">#topljd  &#x5982;&#x679C;&#x6CA1;&#x6709;username&#x503C;&#xFF0C;&#x5C31;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;topljd</span>
+print(username)
+</code></pre>
+<ol>
+<li><code>getlist</code>&#x65B9;&#x6CD5;&#xFF1A;&#x5982;&#x679C;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x4F20;&#x4E0A;&#x6765;&#x7684;<code>key</code>&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x6709;&#x591A;&#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;.</li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.views.decorators.http <span class="hljs-keyword">import</span> require_http_methods
+<span class="hljs-meta">@require_http_methods([&apos;GET&apos;,&apos;POST&apos;])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_article</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">if</span> request.method ==<span class="hljs-string">&apos;GET&apos;</span>:
+        <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&apos;add_article.html&apos;</span>)
+    <span class="hljs-keyword">else</span>:
+        title = request.POST.get(<span class="hljs-string">&apos;title&apos;</span>)
+        content = request.POST.get(<span class="hljs-string">&apos;content&apos;</span>)
+        tags = request.POST.getlist(<span class="hljs-string">&apos;tags&apos;</span>)
+        print(f<span class="hljs-string">&apos;title:{title},content{content},tags:{tags}&apos;</span>)
+        <span class="hljs-string">&apos;&apos;&apos;
+        title:&#x4ECA;&#x65E5;&#xFF0C;&#x4E3A;&#x4ED6;&#x4EEC;&#x6DF1;&#x5207;&#x54C0;&#x60BC;,contentbbb,tags:[&apos;python&apos;, &apos;Django&apos;]
+        &apos;&apos;&apos;</span>
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;success&apos;</span>)
+</code></pre>
+<pre><code class="lang-django"><span class="xml"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>add article<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x6807;&#x9898;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x5185;&#x5BB9;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x6807;&#x7B7E;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+                    Python
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;tags&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;python&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+                    Django
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;tags&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Django&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>
+                    Flask
+                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;tags&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;flask&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x63D0;&#x4EA4;&quot;</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</span></code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="5.2 第二节：页面重定向.html" class="navigation navigation-prev " aria-label="Previous page: 5.2 第二节：页面重定向">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5.4 第四节：HttpResponse对象.html" class="navigation navigation-next " aria-label="Next page: 5.4 第四节：HttpResponse对象">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.3 第三节：HttpRequst对象","level":"1.5.5.3","depth":3,"next":{"title":"5.4 第四节：HttpResponse对象","level":"1.5.5.4","depth":3,"path":"django/django打造大型企业/第五章：高级视图/5.4 第四节：HttpResponse对象.md","ref":"django/django打造大型企业/第五章：高级视图/5.4 第四节：HttpResponse对象.md","articles":[]},"previous":{"title":"5.2 第二节：页面重定向","level":"1.5.5.2","depth":3,"path":"django/django打造大型企业/第五章：高级视图/5.2 第二节：页面重定向.md","ref":"django/django打造大型企业/第五章：高级视图/5.2 第二节：页面重定向.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","expandable-chapters","-lunr","-search","search-pro","livereload"],"pluginsConfig":{"back-to-top-button":{},"expandable-chapters":{},"search-pro":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"django/django打造大型企业/第五章：高级视图/5.3 第三节：HttpRequst对象.md","mtime":"2020-05-18T00:17:24.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-18T00:43:15.081Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
