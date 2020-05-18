@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -11,16 +10,3 @@ origin
 /node_modules/
 /_book/
 ._*/
-=======
-# Default ignored files
-/shelf/
-/workspace.xml
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-origin
-/node_modules/
-/_book/
->>>>>>> 99330082b841b9fb2627df5aa29061bd9ccaa032
