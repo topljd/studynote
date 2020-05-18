@@ -326,6 +326,7 @@ Everything up-to-date
 解决方案：远程仓库与本地仓库代码不一样，上传不了！（远程仓库有其他的文件)
 
 方法：1、`git pull origin master`将远程文件拉取到本地。再次执行`git add .`等系列动作上传。此时一切正常！
+<<<<<<< HEAD
 > 12、上传时出现fatal: 拒绝合并无关的历史
 ```shell
 本地初始化的项目 与 github 版本不一致, 导致无法提交
@@ -349,3 +350,6 @@ Merge made by the 'recursive' strategy.
 > 苹果电脑，上传到github的时候，会发现很多._的文件？
 
 答：其实这些是因为磁盘的格式不是afhs格式自动生成的隐藏文件。
+=======
+
+>>>>>>> 99330082b841b9fb2627df5aa29061bd9ccaa032
