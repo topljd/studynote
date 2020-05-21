@@ -9,4 +9,4 @@
 - python常用的库学习
 - software cracking tutorial
 - 乐高编程EV3
-- 每一次的学习都需要做笔记123
+- 常见问题每个文档50个
