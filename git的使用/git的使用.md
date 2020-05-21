@@ -327,3 +327,34 @@ Everything up-to-date
 
 方法：1、`git pull origin master`将远程文件拉取到本地。再次执行`git add .`等系列动作上传。此时一切正常！
 
+方法2：强推；在本地回滚后，远程上面依然是之前的版本，用`git push -f origin master`将本地库强制推送到远程，这时远程库也已经回滚到之前的提交了。
+
+> 12、上传时出现fatal: 拒绝合并无关的历史
+```shell
+本地初始化的项目 与 github 版本不一致, 导致无法提交
+ 
+$ git pull origin master
+ * branch            master     -> FETCH_HEAD
+fatal: 拒绝合并无关的历史
+解决方法
+ 
+在pull 时候, 添加–allow-unrelated-histories参数 即可.
+ 
+$ git pull origin master --allow-unrelated-histories                   
+来自 https://github.com/itaken/python-login-demo
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ LICENSE | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+ create mode 100644 LICENSE
+```
+
+> 苹果电脑，上传到github的时候，会发现很多._的文件？
+
+答：其实这些是因为磁盘的格式不是afhs格式自动生成的隐藏文件。
+
+> 对于clone的仓库
+
+1、执行 git clone 地址
+
+2、正常git add . 就可以了
