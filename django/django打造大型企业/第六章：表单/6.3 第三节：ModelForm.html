@@ -1,0 +1,1222 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.3 第三节：ModelForm · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.4 第四节：文件上传.html" />
+    
+    
+    <link rel="prev" href="6.2 第二节：用表单验证数据.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    笔记文档介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../git的使用/git的使用.html">
+            
+                <a href="../../../git的使用/git的使用.html">
+            
+                    
+                    git的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../gitbook的使用/快速使用gitbook.html">
+            
+                <a href="../../../gitbook的使用/快速使用gitbook.html">
+            
+                    
+                    gitbook的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    software cracking tutorial
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../software cracking tutorial/pycharm.html">
+            
+                <a href="../../../software cracking tutorial/pycharm.html">
+            
+                    
+                    pycharm激活
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                <a href="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                    
+                    sublime_version3_cracking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../software cracking tutorial/谷歌云.html">
+            
+                <a href="../../../software cracking tutorial/谷歌云.html">
+            
+                    
+                    谷歌云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../software cracking tutorial/navicat15.html">
+            
+                <a href="../../../software cracking tutorial/navicat15.html">
+            
+                    
+                    navicat15激活
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../software cracking tutorial/windowsTerminal配色以及右键gitbash.html">
+            
+                <a href="../../../software cracking tutorial/windowsTerminal配色以及右键gitbash.html">
+            
+                    
+                    windowsTerminal配色以及右键gitbash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../../software cracking tutorial/vscode使用有关问题.html">
+            
+                <a href="../../../software cracking tutorial/vscode使用有关问题.html">
+            
+                    
+                    vscode使用有关问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    django打造大型企业
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    第一章：学前准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                <a href="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                    
+                    第一节：虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../第一章：学前准备/第二节：准备工作.html">
+            
+                <a href="../第一章：学前准备/第二节：准备工作.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../第一章：学前准备/第三节：Django介绍.html">
+            
+                <a href="../第一章：学前准备/第三节：Django介绍.html">
+            
+                    
+                    第三节：Django介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                <a href="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                    
+                    第四节：URL组成部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    第二章：URL与视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                <a href="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                    
+                    第一节：第一个Django项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                <a href="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    第三章：模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../第三章：模板/第一节：模板介绍.html">
+            
+                <a href="../第三章：模板/第一节：模板介绍.html">
+            
+                    
+                    第一节：模板介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../第三章：模板/第二节：模板变量.html">
+            
+                <a href="../第三章：模板/第二节：模板变量.html">
+            
+                    
+                    第二节：模板变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../第三章：模板/第三节：常用标签.html">
+            
+                <a href="../第三章：模板/第三节：常用标签.html">
+            
+                    
+                    第三节：常用标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../第三章：模板/第四节：常用过滤器.html">
+            
+                <a href="../第三章：模板/第四节：常用过滤器.html">
+            
+                    
+                    第四节：常用过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../第三章：模板/第五节：自定义过滤.html">
+            
+                <a href="../第三章：模板/第五节：自定义过滤.html">
+            
+                    
+                    第五节：自定义过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../第三章：模板/第六节：模板结构优化.html">
+            
+                <a href="../第三章：模板/第六节：模板结构优化.html">
+            
+                    
+                    第六节：模板结构优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../第三章：模板/第七节：加载静态文件.html">
+            
+                <a href="../第三章：模板/第七节：加载静态文件.html">
+            
+                    
+                    第七节：加载静态文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    第四章：数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                <a href="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                    
+                    001django mysql安装及其一些软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                <a href="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                    
+                    002django使用原生sql语句操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../第四章：数据库/003mysql图书管理系统.html">
+            
+                <a href="../第四章：数据库/003mysql图书管理系统.html">
+            
+                    
+                    003mysql图书管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../第四章：数据库/004ORM模型.html">
+            
+                <a href="../第四章：数据库/004ORM模型.html">
+            
+                    
+                    004ORM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                <a href="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                    
+                    005ORM模型基本的增删改查操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.6" data-path="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                <a href="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                    
+                    006ORM常用Filed详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.7" data-path="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                <a href="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                    
+                    007navie时间和aware时间详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.8" data-path="../第四章：数据库/008meta类中常见配置.html">
+            
+                <a href="../第四章：数据库/008meta类中常见配置.html">
+            
+                    
+                    008meta类中常见配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.9" data-path="../第四章：数据库/009外链和表关系.html">
+            
+                <a href="../第四章：数据库/009外链和表关系.html">
+            
+                    
+                    009外链和表关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.10" data-path="../第四章：数据库/010ORM查询条件.html">
+            
+                <a href="../第四章：数据库/010ORM查询条件.html">
+            
+                    
+                    010ORM查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.11" data-path="../第四章：数据库/011ORM聚合函数.html">
+            
+                <a href="../第四章：数据库/011ORM聚合函数.html">
+            
+                    
+                    011ORM聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.12" data-path="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                <a href="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                    
+                    012F表达式和Q表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.13" data-path="../第四章：数据库/013Query Set API.html">
+            
+                <a href="../第四章：数据库/013Query Set API.html">
+            
+                    
+                    013Query_Set_API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.14" data-path="../第四章：数据库/014ORM作业.html">
+            
+                <a href="../第四章：数据库/014ORM作业.html">
+            
+                    
+                    014ORM作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.15" data-path="../第四章：数据库/015ORM模型迁移.html">
+            
+                <a href="../第四章：数据库/015ORM模型迁移.html">
+            
+                    
+                    015ORM模型迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    第五章：高级视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                <a href="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                    
+                    5.1 第一节：限制请求method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                <a href="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                    
+                    5.2 第二节：页面重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                <a href="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                    
+                    5.3 第三节：HttpRequst对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                <a href="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                    
+                    5.4 第四节：HttpResponse对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.5" data-path="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                <a href="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                    
+                    5.5 第五节：生成csv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.6" data-path="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                <a href="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                    
+                    5.6 第六节：类视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.7" data-path="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                <a href="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                    
+                    5.7 第七节：错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    第六章：表单
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="6.1 第一节：表单概述.html">
+            
+                <a href="6.1 第一节：表单概述.html">
+            
+                    
+                    6.1 第一节：表单概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="6.2 第二节：用表单验证数据.html">
+            
+                <a href="6.2 第二节：用表单验证数据.html">
+            
+                    
+                    6.2 第二节：用表单验证数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6.3" data-path="6.3 第三节：ModelForm.html">
+            
+                <a href="6.3 第三节：ModelForm.html">
+            
+                    
+                    6.3 第三节：ModelForm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.4" data-path="6.4 第四节：文件上传.html">
+            
+                <a href="6.4 第四节：文件上传.html">
+            
+                    
+                    6.4 第四节：文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.5" data-path="6.5 第五节：memcached.html">
+            
+                <a href="6.5 第五节：memcached.html">
+            
+                    
+                    6.5 memcached
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../php/README.md">
+            
+                <span>
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../常见问题每个文档50个/">
+            
+                <a href="../../../常见问题每个文档50个/">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../常见问题每个文档50个/001常见问题.html">
+            
+                <a href="../../../常见问题每个文档50个/001常见问题.html">
+            
+                    
+                    001常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >6.3 第三节：ModelForm</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="modelform&#xFF1A;">ModelForm&#xFF1A;</h1>
+<p>&#x5927;&#x5BB6;&#x5728;&#x5199;&#x8868;&#x5355;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x8868;&#x5355;&#x4E2D;&#x7684;<code>Field</code>&#x548C;&#x6A21;&#x578B;&#x4E2D;&#x7684;<code>Field</code>&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x8868;&#x5355;&#x4E2D;&#x9700;&#x8981;&#x9A8C;&#x8BC1;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x6A21;&#x578B;&#x4E2D;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x7684;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x6A21;&#x578B;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x8868;&#x5355;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002;
+&#x6BD4;&#x5982;&#x73B0;&#x5728;&#x6709;&#x4E2A;<code>Article</code>&#x7684;&#x6A21;&#x578B;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
+<span class="hljs-keyword">from</span> django.core <span class="hljs-keyword">import</span> validators
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(models.Model)</span>:</span>
+    title = models.CharField(max_length=<span class="hljs-number">10</span>,validators=[validators.MinLengthValidator(limit_value=<span class="hljs-number">3</span>)])
+    content = models.TextField()
+    author = models.CharField(max_length=<span class="hljs-number">100</span>)
+    category = models.CharField(max_length=<span class="hljs-number">100</span>)
+    create_time = models.DateTimeField(auto_now_add=<span class="hljs-keyword">True</span>)
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x5728;&#x5199;&#x8868;&#x5355;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x628A;<code>Article</code>&#x6A21;&#x578B;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#x90FD;&#x4E00;&#x4E2A;&#x4E2A;&#x91CD;&#x590D;&#x5199;&#x4E00;&#x904D;&#x4E86;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django <span class="hljs-keyword">import</span> forms
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Article
+        fields = <span class="hljs-string">&quot;__all__&quot;</span>
+</code></pre>
+<p><code>MyForm</code>&#x662F;&#x7EE7;&#x627F;&#x81EA;<code>forms.ModelForm</code>&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;<code>Meta</code>&#x7C7B;&#xFF0C;&#x5728;<code>Meta</code>&#x7C7B;&#x4E2D;&#x6307;&#x5B9A;&#x4E86;<code>model=Article</code>&#xFF0C;&#x4EE5;&#x53CA;<code>fields=&quot;__all__&quot;</code>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;<code>Article</code>&#x6A21;&#x578B;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#x90FD;&#x590D;&#x5236;&#x8FC7;&#x6765;&#xFF0C;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;&#x5982;&#x679C;&#x53EA;&#x60F3;&#x9488;&#x5BF9;&#x5176;&#x4E2D;&#x51E0;&#x4E2A;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x7ED9;<code>fields</code>&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x5C06;&#x9700;&#x8981;&#x7684;&#x5B57;&#x6BB5;&#x5199;&#x8FDB;&#x53BB;&#x3002;&#x6BD4;&#x5982;&#x53EA;&#x60F3;&#x9A8C;&#x8BC1;<code>title</code>&#x548C;<code>content</code>&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django <span class="hljs-keyword">import</span> forms
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Article
+        fields = [<span class="hljs-string">&apos;title&apos;</span>,<span class="hljs-string">&apos;content&apos;</span>]
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x9A8C;&#x8BC1;&#x7684;&#x5B57;&#x6BB5;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x53EA;&#x662F;&#x9664;&#x4E86;&#x5C11;&#x6570;&#x51E0;&#x4E2A;&#x5B57;&#x6BB5;&#x4E0D;&#x9700;&#x8981;&#x9A8C;&#x8BC1;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>exclude</code>&#x6765;&#x4EE3;&#x66FF;<code>fields</code>&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4E0D;&#x60F3;&#x9A8C;&#x8BC1;<code>category</code>&#xFF0C;&#x90A3;&#x4E48;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Article
+        exclude = [<span class="hljs-string">&apos;category&apos;</span>]
+</code></pre>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#xFF1A;">&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#xFF1A;</h2>
+<p>&#x4F7F;&#x7528;<code>ModelForm</code>&#xFF0C;&#x56E0;&#x4E3A;&#x5B57;&#x6BB5;&#x90FD;&#x4E0D;&#x662F;&#x5728;&#x8868;&#x5355;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4E00;&#x4E9B;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x65E0;&#x6CD5;&#x5728;&#x5B57;&#x6BB5;&#x4E2D;&#x5B9A;&#x4E49;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5728;<code>Meta</code>&#x7C7B;&#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;<code>error_messages</code>&#xFF0C;&#x7136;&#x540E;&#x628A;&#x76F8;&#x5E94;&#x7684;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x5199;&#x5230;&#x91CC;&#x9762;&#x53BB;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Article
+        exclude = [<span class="hljs-string">&apos;category&apos;</span>]
+        error_messages  ={
+            <span class="hljs-string">&apos;title&apos;</span>:{
+                <span class="hljs-string">&apos;max_length&apos;</span>: <span class="hljs-string">&apos;&#x6700;&#x591A;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;10&#x4E2A;&#x5B57;&#x7B26;&#xFF01;&apos;</span>,
+                <span class="hljs-string">&apos;min_length&apos;</span>: <span class="hljs-string">&apos;&#x6700;&#x5C11;&#x4E0D;&#x80FD;&#x5C11;&#x4E8E;3&#x4E2A;&#x5B57;&#x7B26;&#xFF01;&apos;</span>
+            },
+            <span class="hljs-string">&apos;content&apos;</span>: {
+                <span class="hljs-string">&apos;required&apos;</span>: <span class="hljs-string">&apos;&#x5FC5;&#x987B;&#x8F93;&#x5165;content&#xFF01;&apos;</span>,
+            }
+        }
+</code></pre>
+<h2 id="save&#x65B9;&#x6CD5;&#xFF1A;">save&#x65B9;&#x6CD5;&#xFF1A;</h2>
+<p><code>ModelForm</code>&#x8FD8;&#x6709;<code>save</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x9A8C;&#x8BC1;&#x5B8C;&#x6210;&#x540E;&#x76F4;&#x63A5;&#x8C03;&#x7528;<code>save</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4E86;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">form = MyForm(request.POST)
+<span class="hljs-keyword">if</span> form.is_valid():
+    form.save()
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;succes&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    print(form.get_errors())
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;fail&apos;</span>)
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x8981;&#x5728;<code>clean</code>&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x540E;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x5728;<code>clean</code>&#x4E4B;&#x524D;&#x4F7F;&#x7528;&#xFF0C;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8C03;&#x7528;<code>save</code>&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x4F20;&#x5165;&#x4E00;&#x4E2A;<code>commit=False</code>&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x4F1A;&#x751F;&#x6210;&#x8FD9;&#x4E2A;&#x6A21;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x628A;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x771F;&#x6B63;&#x7684;&#x63D2;&#x5165;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x6BD4;&#x5982;&#x8868;&#x5355;&#x4E0A;&#x9A8C;&#x8BC1;&#x7684;&#x5B57;&#x6BB5;&#x6CA1;&#x6709;&#x5305;&#x542B;&#x6A21;&#x578B;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x5148;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#xFF0C;&#x518D;&#x6839;&#x636E;&#x586B;&#x5145;&#x5176;&#x4ED6;&#x5B57;&#x6BB5;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x90FD;&#x8865;&#x5145;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x518D;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">form = MyForm(request.POST)
+<span class="hljs-keyword">if</span> form.is_valid():
+    article = form.save(commit=<span class="hljs-keyword">False</span>)
+    article.category = <span class="hljs-string">&apos;Python&apos;</span>
+    article.save()
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;succes&apos;</span>)
+<span class="hljs-keyword">else</span>:
+    print(form.get_errors())
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;fail&apos;</span>)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x624B;&#x6253;&#x4EE3;&#x7801;</span>
+<span class="hljs-comment">#models.py</span>
+<span class="hljs-keyword">from</span> django.db <span class="hljs-keyword">import</span> models
+<span class="hljs-keyword">from</span> django.core <span class="hljs-keyword">import</span> validators
+<span class="hljs-comment"># Create your models here</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Book</span><span class="hljs-params">(models.Model)</span>:</span>
+    title = models.CharField(max_length=<span class="hljs-number">100</span>)
+    page = models.IntegerField()
+    price = models.FloatField(validators=[validators.MaxValueValidator(limit_value=<span class="hljs-number">1000</span>)])
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(models.Model)</span>:</span>
+    username = models.CharField(max_length=<span class="hljs-number">100</span>)
+    password = models.CharField(max_length=<span class="hljs-number">16</span>)
+    telephone = models.CharField(max_length=<span class="hljs-number">11</span>,validators=[validators.RegexValidator(<span class="hljs-string">r&apos;1[3456789]\d{9}&apos;</span>)])
+
+<span class="hljs-comment">#views.py</span>
+<span class="hljs-keyword">from</span> django.shortcuts <span class="hljs-keyword">import</span> render
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+<span class="hljs-keyword">from</span> .forms <span class="hljs-keyword">import</span> AddBookForm,RegisterForm
+<span class="hljs-keyword">from</span> django.views.decorators.http <span class="hljs-keyword">import</span> require_POST
+<span class="hljs-comment"># Create your views here.</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;index&apos;</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_book</span><span class="hljs-params">(request)</span>:</span>
+    form = AddBookForm(request.POST)
+    <span class="hljs-keyword">if</span> form.is_valid():
+        title = form.cleaned_data.get(<span class="hljs-string">&apos;title&apos;</span>)
+        page = form.cleaned_data.get(<span class="hljs-string">&apos;page&apos;</span>)
+        price = form.cleaned_data.get(<span class="hljs-string">&apos;price&apos;</span>)
+        print(<span class="hljs-string">&apos;title:%s&apos;</span>%title)
+        print(<span class="hljs-string">&apos;page:%s&apos;</span>%page)
+        print(<span class="hljs-string">&apos;price:%s&apos;</span>%price)
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;success&apos;</span>)
+    <span class="hljs-keyword">else</span>:
+        print(form.errors.get_json_data())
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;False&apos;</span>)
+
+<span class="hljs-meta">@require_POST   #&#x53EA;&#x80FD;&#x4F7F;&#x7528;post&#x8BF7;&#x6C42;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span><span class="hljs-params">(request)</span>:</span>
+    form = RegisterForm(request.POST)
+    <span class="hljs-keyword">if</span> form.is_valid():
+        user = form.save(commit=<span class="hljs-keyword">False</span>)
+        user.password =form.cleaned_data.get(<span class="hljs-string">&apos;pwd1&apos;</span>)
+        user.save()
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;success&apos;</span>)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;False&apos;</span>)
+
+
+<span class="hljs-comment">#forms.py</span>
+<span class="hljs-keyword">from</span> django <span class="hljs-keyword">import</span> forms
+<span class="hljs-keyword">from</span> .models <span class="hljs-keyword">import</span> Book,User
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AddBookForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clean_page</span><span class="hljs-params">(self)</span>:</span>
+        page =self.cleaned_data.get(<span class="hljs-string">&apos;page&apos;</span>)
+        <span class="hljs-keyword">if</span> page &gt; <span class="hljs-number">100</span>:
+            <span class="hljs-keyword">raise</span> forms.ValidationError(<span class="hljs-string">&apos;&#x9875;&#x7801;&#x4E0D;&#x80FD;&#x5927;&#x4E8E;100&apos;</span>)
+        <span class="hljs-keyword">return</span> page
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Book
+        <span class="hljs-comment">#fields = &apos;__all__&apos;   &#x8FD9;&#x4E2A;&#x8868;&#x793A;&#x7684;&#x662F;&#x5168;&#x90E8;&#x5B57;&#x6BB5;</span>
+        fields = [<span class="hljs-string">&apos;title&apos;</span>,<span class="hljs-string">&apos;page&apos;</span>,<span class="hljs-string">&apos;price&apos;</span>]<span class="hljs-comment">#&#x8FD9;&#x4E2A;&#x548C;&#x4E0A;&#x9762;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x4E00;&#x4E2A;</span>
+        <span class="hljs-comment">#&#x6392;&#x9664;&#x6CD5;</span>
+        <span class="hljs-comment">#exclude = [&apos;price&apos;]</span>
+        error_messages = {
+            <span class="hljs-string">&apos;page&apos;</span>:{<span class="hljs-string">&apos;required&apos;</span>:<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;page&#x53C2;&#x6570;&apos;</span>,
+                    <span class="hljs-string">&apos;invalid&apos;</span>:<span class="hljs-string">&apos;&#x8BF7;s&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x989D;&#x53C2;&#x6570;&apos;</span>
+                    },
+        <span class="hljs-string">&apos;title&apos;</span>:{
+            <span class="hljs-string">&apos;required&apos;</span>:<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;title&#x53C2;&#x6570;&apos;</span>,
+            <span class="hljs-string">&apos;max_length&apos;</span>:<span class="hljs-string">&apos;title&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;100&#x4E2A;&#x5B57;&#x7B26;&apos;</span>
+        },
+            <span class="hljs-string">&apos;price&apos;</span>:{
+                <span class="hljs-string">&apos;max_value&apos;</span>:<span class="hljs-string">&apos;&#x56FE;&#x4E66;&#x4EF7;&#x683C;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;1000&#x5143;&apos;</span>
+            }
+        }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RegisterForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    pwd1 = forms.CharField(max_length=<span class="hljs-number">16</span>,min_length=<span class="hljs-number">6</span>)
+    pwd2 = forms.CharField(max_length=<span class="hljs-number">16</span>,min_length=<span class="hljs-number">6</span>)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">clean</span><span class="hljs-params">(self)</span>:</span>
+        cleaned_data = super().clean()
+        pwd1 =cleaned_data.get(<span class="hljs-string">&apos;pwd1&apos;</span>)
+        pwd2 =cleaned_data.get(<span class="hljs-string">&apos;pwd2&apos;</span>)
+        <span class="hljs-keyword">if</span> pwd1 != pwd2:
+            <span class="hljs-keyword">raise</span> forms.ValidationError(<span class="hljs-string">&apos;&#x4E24;&#x6B21;&#x5BC6;&#x7801;&#x8F93;&#x5165;&#x4E0D;&#x4E00;&#x81F4;&apos;</span>)
+        <span class="hljs-keyword">return</span> cleaned_data
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = User
+        exclude =[<span class="hljs-string">&apos;password&apos;</span>]
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.2 第二节：用表单验证数据.html" class="navigation navigation-prev " aria-label="Previous page: 6.2 第二节：用表单验证数据">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.4 第四节：文件上传.html" class="navigation navigation-next " aria-label="Next page: 6.4 第四节：文件上传">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.3 第三节：ModelForm","level":"1.5.6.3","depth":3,"next":{"title":"6.4 第四节：文件上传","level":"1.5.6.4","depth":3,"path":"django/django打造大型企业/第六章：表单/6.4 第四节：文件上传.md","ref":"django/django打造大型企业/第六章：表单/6.4 第四节：文件上传.md","articles":[]},"previous":{"title":"6.2 第二节：用表单验证数据","level":"1.5.6.2","depth":3,"path":"django/django打造大型企业/第六章：表单/6.2 第二节：用表单验证数据.md","ref":"django/django打造大型企业/第六章：表单/6.2 第二节：用表单验证数据.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","expandable-chapters","-lunr","-search","search-pro","livereload"],"pluginsConfig":{"back-to-top-button":{},"expandable-chapters":{},"search-pro":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"django/django打造大型企业/第六章：表单/6.3 第三节：ModelForm.md","mtime":"2020-05-19T23:21:56.294Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-24T02:28:52.424Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1289 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.4 第四节：文件上传 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.5 第五节：memcached.html" />
+    
+    
+    <link rel="prev" href="6.3 第三节：ModelForm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    笔记文档介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../../git的使用/git的使用.html">
+            
+                <a href="../../../git的使用/git的使用.html">
+            
+                    
+                    git的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../gitbook的使用/快速使用gitbook.html">
+            
+                <a href="../../../gitbook的使用/快速使用gitbook.html">
+            
+                    
+                    gitbook的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    software cracking tutorial
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../software cracking tutorial/pycharm.html">
+            
+                <a href="../../../software cracking tutorial/pycharm.html">
+            
+                    
+                    pycharm激活
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                <a href="../../../software cracking tutorial/sublime_version3_cracking.html">
+            
+                    
+                    sublime_version3_cracking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../software cracking tutorial/谷歌云.html">
+            
+                <a href="../../../software cracking tutorial/谷歌云.html">
+            
+                    
+                    谷歌云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../software cracking tutorial/navicat15.html">
+            
+                <a href="../../../software cracking tutorial/navicat15.html">
+            
+                    
+                    navicat15激活
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../software cracking tutorial/windowsTerminal配色以及右键gitbash.html">
+            
+                <a href="../../../software cracking tutorial/windowsTerminal配色以及右键gitbash.html">
+            
+                    
+                    windowsTerminal配色以及右键gitbash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../../software cracking tutorial/vscode使用有关问题.html">
+            
+                <a href="../../../software cracking tutorial/vscode使用有关问题.html">
+            
+                    
+                    vscode使用有关问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    django打造大型企业
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    第一章：学前准备
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                <a href="../第一章：学前准备/第一节：虚拟环境.html">
+            
+                    
+                    第一节：虚拟环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../第一章：学前准备/第二节：准备工作.html">
+            
+                <a href="../第一章：学前准备/第二节：准备工作.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../第一章：学前准备/第三节：Django介绍.html">
+            
+                <a href="../第一章：学前准备/第三节：Django介绍.html">
+            
+                    
+                    第三节：Django介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                <a href="../第一章：学前准备/第四节：URL组成部分.html">
+            
+                    
+                    第四节：URL组成部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    第二章：URL与视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                <a href="../第二章：URL与视图/第一节：第一个Django项目.html">
+            
+                    
+                    第一节：第一个Django项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                <a href="../第二章：URL与视图/第二节：视图与URL分发器.html">
+            
+                    
+                    第二节：准备工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    第三章：模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../第三章：模板/第一节：模板介绍.html">
+            
+                <a href="../第三章：模板/第一节：模板介绍.html">
+            
+                    
+                    第一节：模板介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../第三章：模板/第二节：模板变量.html">
+            
+                <a href="../第三章：模板/第二节：模板变量.html">
+            
+                    
+                    第二节：模板变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../第三章：模板/第三节：常用标签.html">
+            
+                <a href="../第三章：模板/第三节：常用标签.html">
+            
+                    
+                    第三节：常用标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../第三章：模板/第四节：常用过滤器.html">
+            
+                <a href="../第三章：模板/第四节：常用过滤器.html">
+            
+                    
+                    第四节：常用过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../第三章：模板/第五节：自定义过滤.html">
+            
+                <a href="../第三章：模板/第五节：自定义过滤.html">
+            
+                    
+                    第五节：自定义过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../第三章：模板/第六节：模板结构优化.html">
+            
+                <a href="../第三章：模板/第六节：模板结构优化.html">
+            
+                    
+                    第六节：模板结构优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../第三章：模板/第七节：加载静态文件.html">
+            
+                <a href="../第三章：模板/第七节：加载静态文件.html">
+            
+                    
+                    第七节：加载静态文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    第四章：数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                <a href="../第四章：数据库/001django mysql安装及其一些软件.html">
+            
+                    
+                    001django mysql安装及其一些软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                <a href="../第四章：数据库/002django使用原生sql语句操作数据库.html">
+            
+                    
+                    002django使用原生sql语句操作数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../第四章：数据库/003mysql图书管理系统.html">
+            
+                <a href="../第四章：数据库/003mysql图书管理系统.html">
+            
+                    
+                    003mysql图书管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../第四章：数据库/004ORM模型.html">
+            
+                <a href="../第四章：数据库/004ORM模型.html">
+            
+                    
+                    004ORM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                <a href="../第四章：数据库/005ORM模型基本的增删改查操作.html">
+            
+                    
+                    005ORM模型基本的增删改查操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.6" data-path="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                <a href="../第四章：数据库/006ORM常用Filed详解.html">
+            
+                    
+                    006ORM常用Filed详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.7" data-path="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                <a href="../第四章：数据库/007navie时间和aware时间详解.html">
+            
+                    
+                    007navie时间和aware时间详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.8" data-path="../第四章：数据库/008meta类中常见配置.html">
+            
+                <a href="../第四章：数据库/008meta类中常见配置.html">
+            
+                    
+                    008meta类中常见配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.9" data-path="../第四章：数据库/009外链和表关系.html">
+            
+                <a href="../第四章：数据库/009外链和表关系.html">
+            
+                    
+                    009外链和表关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.10" data-path="../第四章：数据库/010ORM查询条件.html">
+            
+                <a href="../第四章：数据库/010ORM查询条件.html">
+            
+                    
+                    010ORM查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.11" data-path="../第四章：数据库/011ORM聚合函数.html">
+            
+                <a href="../第四章：数据库/011ORM聚合函数.html">
+            
+                    
+                    011ORM聚合函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.12" data-path="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                <a href="../第四章：数据库/012F表达式和Q表达式.html">
+            
+                    
+                    012F表达式和Q表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.13" data-path="../第四章：数据库/013Query Set API.html">
+            
+                <a href="../第四章：数据库/013Query Set API.html">
+            
+                    
+                    013Query_Set_API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.14" data-path="../第四章：数据库/014ORM作业.html">
+            
+                <a href="../第四章：数据库/014ORM作业.html">
+            
+                    
+                    014ORM作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.15" data-path="../第四章：数据库/015ORM模型迁移.html">
+            
+                <a href="../第四章：数据库/015ORM模型迁移.html">
+            
+                    
+                    015ORM模型迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    第五章：高级视图
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                <a href="../第五章：高级视图/5.1 第一节：限制请求method.html">
+            
+                    
+                    5.1 第一节：限制请求method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                <a href="../第五章：高级视图/5.2 第二节：页面重定向.html">
+            
+                    
+                    5.2 第二节：页面重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                <a href="../第五章：高级视图/5.3 第三节：HttpRequst对象.html">
+            
+                    
+                    5.3 第三节：HttpRequst对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                <a href="../第五章：高级视图/5.4 第四节：HttpResponse对象.html">
+            
+                    
+                    5.4 第四节：HttpResponse对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.5" data-path="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                <a href="../第五章：高级视图/5.5 第五节：生成csv文件.html">
+            
+                    
+                    5.5 第五节：生成csv文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.6" data-path="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                <a href="../第五章：高级视图/5.6 第六节：类视图.html">
+            
+                    
+                    5.6 第六节：类视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.7" data-path="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                <a href="../第五章：高级视图/5.7 第七节：错误处理.html">
+            
+                    
+                    5.7 第七节：错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" >
+            
+                <span>
+            
+                    
+                    第六章：表单
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="6.1 第一节：表单概述.html">
+            
+                <a href="6.1 第一节：表单概述.html">
+            
+                    
+                    6.1 第一节：表单概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="6.2 第二节：用表单验证数据.html">
+            
+                <a href="6.2 第二节：用表单验证数据.html">
+            
+                    
+                    6.2 第二节：用表单验证数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.3" data-path="6.3 第三节：ModelForm.html">
+            
+                <a href="6.3 第三节：ModelForm.html">
+            
+                    
+                    6.3 第三节：ModelForm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6.4" data-path="6.4 第四节：文件上传.html">
+            
+                <a href="6.4 第四节：文件上传.html">
+            
+                    
+                    6.4 第四节：文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.5" data-path="6.5 第五节：memcached.html">
+            
+                <a href="6.5 第五节：memcached.html">
+            
+                    
+                    6.5 memcached
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../../php/README.md">
+            
+                <span>
+            
+                    
+                    php
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../../常见问题每个文档50个/">
+            
+                <a href="../../../常见问题每个文档50个/">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../常见问题每个文档50个/001常见问题.html">
+            
+                <a href="../../../常见问题每个文档50个/001常见问题.html">
+            
+                    
+                    001常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >6.4 第四节：文件上传</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF1A;">&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#xFF1A;</h1>
+<p>&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x662F;&#x7F51;&#x7AD9;&#x5F00;&#x53D1;&#x4E2D;&#x975E;&#x5E38;&#x5E38;&#x89C1;&#x7684;&#x529F;&#x80FD;&#x3002;&#x8FD9;&#x91CC;&#x8BE6;&#x7EC6;&#x8BB2;&#x8FF0;&#x5982;&#x4F55;&#x5728;<code>Django</code>&#x4E2D;&#x5B9E;&#x73B0;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x524D;&#x7AEF;html&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;">&#x524D;&#x7AEF;HTML&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</h2>
+<ol>
+<li>&#x5728;&#x524D;&#x7AEF;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x586B;&#x5165;&#x4E00;&#x4E2A;<code>form</code>&#x6807;&#x7B7E;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8FD9;&#x4E2A;<code>form</code>&#x6807;&#x7B7E;&#x4E2D;&#x6307;&#x5B9A;<code>enctype=&quot;multipart/form-data&quot;</code>&#xFF0C;&#x4E0D;&#x7136;&#x5C31;&#x4E0D;&#x80FD;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x5728;<code>form</code>&#x6807;&#x7B7E;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>input</code>&#x6807;&#x7B7E;&#xFF0C;&#x7136;&#x540E;&#x6307;&#x5B9A;<code>input</code>&#x6807;&#x7B7E;&#x7684;<code>name</code>&#xFF0C;&#x4EE5;&#x53CA;<code>type=&quot;file&quot;</code>&#x3002;</li>
+</ol>
+<p>&#x4EE5;&#x4E0A;&#x4E24;&#x6B65;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">enctype</span>=<span class="hljs-string">&quot;multipart/form-data&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myfile&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<h2 id="&#x540E;&#x7AEF;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;">&#x540E;&#x7AEF;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</h2>
+<p>&#x540E;&#x7AEF;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x662F;&#x63A5;&#x6536;&#x6587;&#x4EF6;&#x3002;&#x7136;&#x540E;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x3002;&#x63A5;&#x6536;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x8DDF;&#x63A5;&#x6536;<code>POST</code>&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x901A;&#x8FC7;<code>FILES</code>&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">save_file</span><span class="hljs-params">(file)</span>:</span>
+    <span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;somefile.txt&apos;</span>,<span class="hljs-string">&apos;wb&apos;</span>) <span class="hljs-keyword">as</span> fp:
+        <span class="hljs-keyword">for</span> chunk <span class="hljs-keyword">in</span> file.chunks():
+            fp.write(chunk)
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&apos;GET&apos;</span>:
+        form = MyForm()
+        <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&apos;index.html&apos;</span>,{<span class="hljs-string">&apos;form&apos;</span>:form})
+    <span class="hljs-keyword">else</span>:
+        myfile = request.FILES.get(<span class="hljs-string">&apos;myfile&apos;</span>)
+        save_file(myfile)
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;success&apos;</span>)
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x901A;&#x8FC7;<code>request.FILES</code>&#x63A5;&#x6536;&#x5230;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x518D;&#x5199;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5730;&#x65B9;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&#x529F;&#x80FD;&#x4E86;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x6A21;&#x578B;&#x6765;&#x5904;&#x7406;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#xFF1A;">&#x4F7F;&#x7528;<code>&#x6A21;&#x578B;</code>&#x6765;&#x5904;&#x7406;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#xFF1A;</h2>
+<p>&#x5728;&#x5B9A;&#x4E49;&#x6A21;&#x578B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7ED9;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x5B57;&#x6BB5;&#x6307;&#x5B9A;&#x4E3A;<code>FileField</code>&#xFF0C;&#x8FD9;&#x4E2A;<code>Field</code>&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;<code>upload_to</code>&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x4E0A;&#x4F20;&#x4E0A;&#x6765;&#x7684;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5230;&#x54EA;&#x91CC;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x8BA9;&#x4ED6;&#x4FDD;&#x5B58;&#x5230;&#x9879;&#x76EE;&#x7684;<code>files</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x90A3;&#x4E48;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># models.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(models.Model)</span>:</span>
+    title = models.CharField(max_length=<span class="hljs-number">100</span>)
+    content = models.TextField()
+    thumbnail = models.FileField(upload_to=<span class="hljs-string">&quot;files&quot;</span>)
+
+
+<span class="hljs-comment"># views.py</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&apos;GET&apos;</span>:
+        <span class="hljs-keyword">return</span> render(request,<span class="hljs-string">&apos;index.html&apos;</span>)
+    <span class="hljs-keyword">else</span>:
+        title = request.POST.get(<span class="hljs-string">&apos;title&apos;</span>)
+        content = request.POST.get(<span class="hljs-string">&apos;content&apos;</span>)
+        thumbnail = request.FILES.get(<span class="hljs-string">&apos;thumbnail&apos;</span>)
+        article = Article(title=title, content=content, thumbnail=thumbnail)
+        article.save()
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;success&apos;</span>)
+ <span class="hljs-comment">#&#x624B;&#x6253;&#x4EE3;&#x7801;</span>
+   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post</span><span class="hljs-params">(self,request)</span>:</span>
+        title = request.POST.get(<span class="hljs-string">&apos;title&apos;</span>)
+        content = request.POST.get(<span class="hljs-string">&apos;content&apos;</span>)
+        file = request.FILES.get(<span class="hljs-string">&apos;myfile&apos;</span>)
+        Article.objects.create(title=title,content=content,thumnail=file)
+        <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">&apos;success&apos;</span>)
+</code></pre>
+<p>&#x8C03;&#x7528;&#x5B8C;<code>article.save()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x4F1A;&#x628A;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5230;<code>files</code>&#x4E0B;&#x9762;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5C06;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;</p>
+<h2 id="&#x6307;&#x5B9A;mediaroot&#x548C;mediaurl&#xFF1A;">&#x6307;&#x5B9A;<code>MEDIA_ROOT</code>&#x548C;<code>MEDIA_URL</code>&#xFF1A;</h2>
+<p>&#x4EE5;&#x4E0A;&#x6211;&#x4EEC;&#x662F;&#x4F7F;&#x7528;&#x4E86;<code>upload_to</code>&#x6765;&#x6307;&#x5B9A;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;<code>MEDIA_ROOT</code>&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x5728;<code>FielField</code>&#x4E2D;&#x6307;&#x5B9A;<code>upload_to</code>&#xFF0C;&#x4ED6;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x5C06;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;<code>MEDIA_ROOT</code>&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-python">MEDIA_ROOT = os.path.join(BASE_DIR,<span class="hljs-string">&apos;media&apos;</span>)
+MEDIA_URL = <span class="hljs-string">&apos;/media/&apos;</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;<code>urls.py</code>&#x4E2D;&#x6DFB;&#x52A0;<code>MEDIA_ROOT</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x8BBF;&#x95EE;&#x8DEF;&#x5F84;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+<span class="hljs-keyword">from</span> front <span class="hljs-keyword">import</span> views
+<span class="hljs-keyword">from</span> django.conf.urls.static <span class="hljs-keyword">import</span> static
+<span class="hljs-keyword">from</span> django.conf <span class="hljs-keyword">import</span> settings
+
+urlpatterns = [
+    path(<span class="hljs-string">&apos;&apos;</span>, views.index),
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+</code></pre>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x540C;&#x65F6;&#x6307;&#x5B9A;<code>MEDIA_ROOT</code>&#x548C;<code>upload_to</code>&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x5C06;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;<code>MEDIA_ROOT</code>&#x4E0B;&#x7684;<code>upload_to</code>&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(models.Model)</span>:</span>
+    title = models.CharField(max_length=<span class="hljs-number">100</span>)
+    content = models.TextField()
+    thumbnail = models.FileField(upload_to=<span class="hljs-string">&quot;%Y/%m/%d/&quot;</span>)
+</code></pre>
+<h2 id="&#x9650;&#x5236;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x62D3;&#x5C55;&#x540D;&#xFF1A;">&#x9650;&#x5236;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x62D3;&#x5C55;&#x540D;&#xFF1A;</h2>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x9650;&#x5236;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x62D3;&#x5C55;&#x540D;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x7528;&#x5230;&#x8868;&#x5355;&#x6765;&#x8FDB;&#x884C;&#x9650;&#x5236;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7684;<code>Form</code>&#x8868;&#x5355;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>ModelForm</code>&#xFF0C;&#x76F4;&#x63A5;&#x4ECE;&#x6A21;&#x578B;&#x4E2D;&#x8BFB;&#x53D6;&#x5B57;&#x6BB5;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># models.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(models.Model)</span>:</span>
+    title = models.CharField(max_length=<span class="hljs-number">100</span>)
+    content = models.TextField()
+    thumbnial = models.FileField(upload_to=<span class="hljs-string">&apos;%Y/%m/%d/&apos;</span>,validators=[validators.FileExtensionValidator([<span class="hljs-string">&apos;txt&apos;</span>,<span class="hljs-string">&apos;pdf&apos;</span>])])
+
+<span class="hljs-comment"># forms.py</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArticleForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Article
+        fields = <span class="hljs-string">&quot;__all__&quot;</span>
+</code></pre>
+<h2 id="&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#xFF1A;">&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#xFF1A;</h2>
+<p>&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x8DDF;&#x4E0A;&#x4F20;&#x666E;&#x901A;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x4E0A;&#x4F20;&#x56FE;&#x7247;&#x7684;&#x65F6;&#x5019;<code>Django</code>&#x4F1A;&#x5224;&#x65AD;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x662F;&#x56FE;&#x7247;&#x7684;&#x683C;&#x5F0F;&#xFF08;&#x9664;&#x4E86;&#x5224;&#x65AD;&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x8FD8;&#x4F1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x53EF;&#x7528;&#x7684;&#x56FE;&#x7247;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x9A8C;&#x8BC1;&#x5931;&#x8D25;&#x3002;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x5148;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5305;&#x542B;<code>ImageField</code>&#x7684;&#x6A21;&#x578B;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(models.Model)</span>:</span>
+    title = models.CharField(max_length=<span class="hljs-number">100</span>)
+    content = models.TextField()
+    thumbnail = models.ImageField(upload_to=<span class="hljs-string">&quot;%Y/%m/%d/&quot;</span>)
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x8981;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x662F;&#x5408;&#x683C;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x7528;&#x4E00;&#x4E2A;&#x8868;&#x5355;&#x6765;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;&#x8868;&#x5355;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5C31;&#x4F7F;&#x7528;<code>ModelForm</code>&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyForm</span><span class="hljs-params">(forms.ModelForm)</span>:</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meta</span>:</span>
+        model = Article
+        fields = <span class="hljs-string">&quot;__all__&quot;</span>
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x4F7F;&#x7528;ImageField&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x5148;&#x5B89;&#x88C5;Pillow&#x5E93;&#xFF1A;pip install pillow</strong></p>
+<pre><code class="lang-python">#models.py
+from django.db import models
+from django.core import validators
+# Create your models here.
+class Article(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    #thumnail = models.FileField()
+    # thumnail = models.FileField(upload_to=&apos;%Y/%m/%d/&apos;,validators=[validators.FileExtensionValidator([&apos;txt&apos;],message=&apos;thumbnial&apos;)])
+    thumbnail = models.ImageField(upload_to=&apos;%Y/%m/%d/&apos;)
+
+#views.py
+from django.shortcuts import render
+from django.views.generic import View
+from django.http import  HttpResponse
+from .models import Article
+from .forms import ArticleForm
+# Create your views here.
+class IndexView(View):
+    def get(self,request):
+        return render(request,&apos;index.html&apos;)
+
+    # def post(self,request):
+    #     myfile = request.FILES.get(&apos;myfile&apos;)
+    #     # &#x3010;&#x62A5;&#x9519;&#x3011;&apos;NoneType&apos; object has no attribute&apos;strftime&apos;
+    #     # &#x3010;&#x539F;&#x56E0;&#x3011;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x547D;&#x4EE4;python manage.py makemigrations &#x548C;&#x547D;&#x4EE4;python manage.py migrate&#x91CD;&#x65B0;&#x751F;&#x6210;&#x6570;&#x636E;&#x5E93;&#x8868;
+    #
+    #     with open(&apos;somefile2.txt&apos;,&apos;wb&apos;)as fp:
+    #         for content in myfile.chunks():
+    #             fp.write(content)
+    #             print(content)
+    #     return HttpResponse(&apos;&#x4E0A;&#x4F20;&#x6210;&#x529F;&apos;)
+
+    # def index(request):
+    #     if request.method == &apos;GET&apos;:
+    #         return render(request,&apos;index.html&apos;)
+    #     else:
+    #         title = request.POST.get(&apos;title&apos;)
+    #         content = request.POST.get(&apos;content&apos;)
+    #         thumbnail = re
+
+    # def post(self,request):
+    #     title = request.POST.get(&apos;title&apos;)
+    #     content = request.POST.get(&apos;content&apos;)
+    #     file = request.FILES.get(&apos;myfile&apos;)
+    #     Article.objects.create(title=title,content=content,thumnail=file)
+    #     return HttpResponse(&apos;success&apos;)
+
+    def post(self,request):
+        #&#x7528;&#x6765;&#x9A8C;&#x8BC1;&#x8868;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x6A21;&#x578B;
+        form = ArticleForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponse(&apos;sucess&apos;)
+        else:
+            print(form.errors.get_json_data())
+            return HttpResponse(&apos;fail&apos;)
+
+
+#urls.py
+&quot;&quot;&quot;uploadfile_demo URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path(&apos;&apos;, views.home, name=&apos;home&apos;)
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path(&apos;&apos;, Home.as_view(), name=&apos;home&apos;)
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path(&apos;blog/&apos;, include(&apos;blog.urls&apos;))
+&quot;&quot;&quot;
+from django.contrib import admin
+from django.urls import path
+from front import views
+
+#&#x5BFC;&#x5165;&#x9759;&#x6001;&#x8DEF;&#x5F84;
+from django.conf.urls.static import static
+from django.conf import settings
+urlpatterns = [
+    ##path(&apos;&apos;, views.IndexView.as_view()),
+    path(&apos;&apos;, views.IndexView.as_view()),
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+#forms.py
+from django import forms
+from .models import Article
+
+#form&#x8868;&#x5355;&#x9A8C;&#x8BC1;
+class ArticleForm(forms.ModelForm):
+    class Meta:
+        model =Article
+        fields = &quot;__all__&quot;
+        #all&#x8868;&#x793A;&#x9A8C;&#x8BC1;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;
+        error_messages = {
+            &apos;thumbnail&apos;:{
+                &apos;invalid_image&apos;:&apos;&#x8BF7;&#x4E0A;&#x4F20;&#x6B63;&#x786E;&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;&apos;
+            }
+        }
+#index.html
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;title&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;content&quot;&gt;
+    &lt;input type=&quot;file&quot; name=&quot;thumbnail&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;&#x63D0;&#x4EA4;&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.3 第三节：ModelForm.html" class="navigation navigation-prev " aria-label="Previous page: 6.3 第三节：ModelForm">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.5 第五节：memcached.html" class="navigation navigation-next " aria-label="Next page: 6.5 memcached">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.4 第四节：文件上传","level":"1.5.6.4","depth":3,"next":{"title":"6.5 memcached","level":"1.5.6.5","depth":3,"path":"django/django打造大型企业/第六章：表单/6.5 第五节：memcached.md","ref":"django/django打造大型企业/第六章：表单/6.5 第五节：memcached.md","articles":[]},"previous":{"title":"6.3 第三节：ModelForm","level":"1.5.6.3","depth":3,"path":"django/django打造大型企业/第六章：表单/6.3 第三节：ModelForm.md","ref":"django/django打造大型企业/第六章：表单/6.3 第三节：ModelForm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","expandable-chapters","-lunr","-search","search-pro","livereload"],"pluginsConfig":{"back-to-top-button":{},"expandable-chapters":{},"search-pro":{},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"django/django打造大型企业/第六章：表单/6.4 第四节：文件上传.md","mtime":"2020-05-24T00:21:08.231Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-24T02:28:52.424Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
