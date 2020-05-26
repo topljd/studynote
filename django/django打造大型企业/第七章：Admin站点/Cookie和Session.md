@@ -92,6 +92,38 @@ def cms_view(request):
 def index(request):
    request.session.get('username')
    return HttpResponse('index')
+
+#手打代码
+def session_view(request):
+    #request.session['username']='zhiliao'
+    '''
+    session_key:xu1sqci41tu9o8ti7euoek9mo88oborw
+    session_data:MmVjMTQxMWZhZTliMGFhNzhiZDBmOTI0ZWFjMjFkOWZkZjJkOTA2Zjp7InVzZXJuYW1lIjoiemhpbGlhbyJ9
+    expire_date:06:45:47.800084
+    '''
+
+    username = request.session.get('username')
+    #此时可以访问到 zhiliao
+
+    #从`session`中删除一个值
+    #username = request.session.pop('username')
+    #request.session['username']='zhiliao'
+    #request.session['userid']=10
+
+    #调用clear方法
+    #request.session.clear()#可以清楚掉session，表里面的数据还是有的
+
+    #request.session.flush()#执行这样的语句，就会数据表里的数据将会消失
+    print(username)
+
+    #request.session.set_expiry(0)#将会马上过期
+    #request.session.set_expiry(None)#默认的过期日期，两周后
+
+    #request.session.set_expiry(-1)
+
+    request.session.clear_expired()
+    #删除掉过期的session
+
 ```
 
 `session`常用的方法如下：
@@ -117,3 +149,15 @@ def index(request):
 3. `django.contrib.sessions.backends.cache`：使用缓存来存储session。想要将数据存储到缓存中，前提是你必须要在`settings.py`中配置好`CACHES`，并且是需要使用`Memcached`，而不能使用纯内存作为缓存。
 4. `django.contrib.sessions.backends.cached_db`：在存储数据的时候，会将数据先存到缓存中，再存到数据库中。这样就可以保证万一缓存系统出现问题，session数据也不会丢失。在获取数据的时候，会先从缓存中获取，如果缓存中没有，那么就会从数据库中获取。
 5. `django.contrib.sessions.backends.signed_cookies`：将`session`信息加密后存储到浏览器的`cookie`中。这种方式要注意安全，建议设置`SESSION_COOKIE_HTTPONLY=True`，那么在浏览器中不能通过`js`来操作`session`数据，并且还需要对`settings.py`中的`SECRET_KEY`进行保密，因为一旦别人知道这个`SECRET_KEY`，那么就可以进行解密。另外还有就是在`cookie`中，存储的数据不能超过`4k`。
+```python
+#settings.py
+#以下部分SESSION_COOKIE_AGE
+CACHES = {
+    'default':{
+        'BACKEND':'django.core.cache.backends.memcached.MemcachedCache',
+        'LOACATION':'127.0.0.1:11211',
+    }
+}
+SESSION_ENGINE = 'django.contrib.session.backends.cached_db'
+
+```

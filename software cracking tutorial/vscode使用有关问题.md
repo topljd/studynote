@@ -28,6 +28,31 @@ a.安装插件
 
 > 3、vscode配置python环境
 
+![1590288651345.png](images\1590288651345.png)
 
 
 
+> 4、VScode ---- vue中HTML代码tab键自动补全插件及配置
+
+1、首先在vscode商店中下载并重新加载HTML Snippets
+
+2、在设置setting.json中搜索files.asscociations配置对象
+
+![image-20200524172705940](images/image-20200524172705940.png)
+
+在最后边插入如下代码：
+
+```vue
+ "files.associations": {
+        "*.vue": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html"
+    }
+```
+
+![image-20200524172829506](images/image-20200524172829506.png)
+
+在html结构中就可以使用tab键自动补全标签
