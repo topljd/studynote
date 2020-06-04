@@ -32,8 +32,8 @@ b、右键`windows Terminal`
 首先在shell中输入如下代码：
 
 ```shell
-echo %USERPROFILE%
-echo %LOCALAPPDATA%
+echo %USERPROFILE%   //C:\Users\[username]
+echo %LOCALAPPDATA%   //C:\Users\[username]\AppData\Local
 ```
 查看输出的路径，注意自己本地的路径，对后边的`[username]`进行替换！
 
@@ -56,6 +56,8 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]
 @="C:\\Users\\[user_name]\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
 ```
+查看输出的路径，注意自己本地的路径，对后边的`[username]`进行替换！
+
 记得要在`window terminal`文件配置中加入
 
 ![1590286231242.png](images\1590286231242.png)
