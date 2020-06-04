@@ -358,3 +358,21 @@ Merge made by the 'recursive' strategy.
 1、执行 git clone 地址
 
 2、正常git add . 就可以了
+
+> 13、git提交的时候log日志出现乱码
+
+![image-20200604170030111](images/image-20200604170030111.png)
+
+解决办法：
+
+找到自己的 git 安装目录，在该路径下执行以下3条设置命令， 分别设置 提交文件、界面、提交日志 这三者的编码格式。
+
+```git
+
+git config --global i18n.commitencoding utf-8
+ 
+git config --global gui.encoding utf-8 
+ 
+git config --global i18n.logoutputencoding utf-8
+```
+
